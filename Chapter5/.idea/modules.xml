@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/5.6. Abstract Classes/5.6. Abstract Classes.iml" filepath="$PROJECT_DIR$/5.6. Abstract Classes/5.6. Abstract Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5.7. Enumeration Classes/5.7. Enumeration Classes.iml" filepath="$PROJECT_DIR$/5.7. Enumeration Classes/5.7. Enumeration Classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Chapter-5.iml" filepath="$PROJECT_DIR$/.idea/Chapter-5.iml" />
       <module fileurl="file://$PROJECT_DIR$/The toString Method/The toString Method.iml" filepath="$PROJECT_DIR$/The toString Method/The toString Method.iml" />
     </modules>
