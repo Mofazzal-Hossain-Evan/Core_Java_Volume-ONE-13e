@@ -1,6 +1,6 @@
 package patternMatching;
 
-public class TypePatternTest
+public class ypePatternTest
 {
     public static void main(String[] args)
     {
