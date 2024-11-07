@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/5.6. Abstract Classes/5.6. Abstract Classes.iml" filepath="$PROJECT_DIR$/5.6. Abstract Classes/5.6. Abstract Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5.7. Enumeration Classes/5.7. Enumeration Classes.iml" filepath="$PROJECT_DIR$/5.7. Enumeration Classes/5.7. Enumeration Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5.8. Sealed Classes/5.8. Sealed Classes.iml" filepath="$PROJECT_DIR$/5.8. Sealed Classes/5.8. Sealed Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Chapter-5.iml" filepath="$PROJECT_DIR$/.idea/Chapter-5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Listing 5.14 patternMatching/Listing 5.14 patternMatching.iml" filepath="$PROJECT_DIR$/Listing 5.14 patternMatching/Listing 5.14 patternMatching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Listing 5.17 reflection/Listing 5.17 reflection.iml" filepath="$PROJECT_DIR$/Listing 5.17 reflection/Listing 5.17 reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Listing 5.18 objectAnalyzer/Listing 5.18 objectAnalyzer.iml" filepath="$PROJECT_DIR$/Listing 5.18 objectAnalyzer/Listing 5.18 objectAnalyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Listing 5.20 arrays/Listing 5.20 arrays.iml" filepath="$PROJECT_DIR$/Listing 5.20 arrays/Listing 5.20 arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Listing 5.21 methods/Listing 5.21 methods.iml" filepath="$PROJECT_DIR$/Listing 5.21 methods/Listing 5.21 methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/The toString Method/The toString Method.iml" filepath="$PROJECT_DIR$/The toString Method/The toString Method.iml" />
+    </modules>
+  </component>
+</project>
