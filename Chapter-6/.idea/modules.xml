@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/6.1.1. The Interface Concept-/6.1.1. The Interface Concept.iml" filepath="$PROJECT_DIR$/6.1.1. The Interface Concept-/6.1.1. The Interface Concept.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1.1. The Interface Concept/6.1.1. The Interface Concept.iml" filepath="$PROJECT_DIR$/6.1.1. The Interface Concept/6.1.1. The Interface Concept.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1.9. Object Cloning/6.1.9. Object Cloning.iml" filepath="$PROJECT_DIR$/6.1.9. Object Cloning/6.1.9. Object Cloning.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Chapter-6.iml" filepath="$PROJECT_DIR$/.idea/Chapter-6.iml" />
     </modules>
   </component>
