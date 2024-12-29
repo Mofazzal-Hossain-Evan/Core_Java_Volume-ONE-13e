@@ -87,6 +87,26 @@ public class StringManipulator {
                     input.close();
                     return;
 
+                /***
+                 * he return statement in the given code is used to terminate the execution of the main method (or the current method) and
+                 immediately exit it.
+                  Here's what happens in the context of your example:
+                 When the user selects option 5 (Case 5):
+
+                 The program displays the message "Exiting the String Manipulator. Goodbye!".
+                 The input.close(); statement closes the Scanner object to release any system resources associated with it.
+
+                 The return; statement ends the method execution and exits the program because this code is likely in the main method.
+                 Effect of return:
+
+                 It stops further execution of the method (in this case, the main method).
+                 After the return statement is executed, no other code in the main method will run, and the program ends.
+                 Why Use return?
+
+                 It provides a clean and explicit way to exit the method or program.
+                 If the return statement is omitted, the program might continue executing unintended parts of the code (if they exist after the switch statement).
+                 */
+
                 default:
                     System.out.println("Invalid choice. Please try again.");
 
