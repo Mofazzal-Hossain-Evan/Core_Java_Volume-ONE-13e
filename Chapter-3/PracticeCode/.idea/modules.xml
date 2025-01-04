@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PracticeCode.iml" filepath="$PROJECT_DIR$/.idea/PracticeCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.4.3. Constants/3.4.3. Constants.iml" filepath="$PROJECT_DIR$/3.4.3. Constants/3.4.3. Constants.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.4.4. Enumerated Types/3.4.4. Enumerated Types.iml" filepath="$PROJECT_DIR$/3.4.4. Enumerated Types/3.4.4. Enumerated Types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5. Operators/3.5. Operators.iml" filepath="$PROJECT_DIR$/3.5. Operators/3.5. Operators.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5.11. Parentheses and Operator Hierarchy/3.5.11. Parentheses and Operator Hierarchy.iml" filepath="$PROJECT_DIR$/3.5.11. Parentheses and Operator Hierarchy/3.5.11. Parentheses and Operator Hierarchy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5.3. Conversions between Numeric Types/3.5.3. Conversions between Numeric Types.iml" filepath="$PROJECT_DIR$/3.5.3. Conversions between Numeric Types/3.5.3. Conversions between Numeric Types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5.4. Casts/3.5.4. Casts.iml" filepath="$PROJECT_DIR$/3.5.4. Casts/3.5.4. Casts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5.6. Increment and Decrement Operators/3.5.6. Increment and Decrement Operators.iml" filepath="$PROJECT_DIR$/3.5.6. Increment and Decrement Operators/3.5.6. Increment and Decrement Operators.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5.8. The Conditional Operator/3.5.8. The Conditional Operator.iml" filepath="$PROJECT_DIR$/3.5.8. The Conditional Operator/3.5.8. The Conditional Operator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.5.9. Switch Expressions/3.5.9. Switch Expressions.iml" filepath="$PROJECT_DIR$/3.5.9. Switch Expressions/3.5.9. Switch Expressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.6.1. Concatenation/3.6.1. Concatenation.iml" filepath="$PROJECT_DIR$/3.6.1. Concatenation/3.6.1. Concatenation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.6.4. Strings Are Immutable/3.6.4. Strings Are Immutable.iml" filepath="$PROJECT_DIR$/3.6.4. Strings Are Immutable/3.6.4. Strings Are Immutable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.6.6. Empty and Null Strings/3.6.6. Empty and Null Strings.iml" filepath="$PROJECT_DIR$/3.6.6. Empty and Null Strings/3.6.6. Empty and Null Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.6.7. The String API/3.6.7. The String API.iml" filepath="$PROJECT_DIR$/3.6.7. The String API/3.6.7. The String API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.7.1. Reading Input/3.7.1. Reading Input.iml" filepath="$PROJECT_DIR$/3.7.1. Reading Input/3.7.1. Reading Input.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.7.2. Formatting Output/3.7.2. Formatting Output.iml" filepath="$PROJECT_DIR$/3.7.2. Formatting Output/3.7.2. Formatting Output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.7.3. File Input and Output/3.7.3. File Input and Output.iml" filepath="$PROJECT_DIR$/3.7.3. File Input and Output/3.7.3. File Input and Output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyCodePractices.iml" filepath="$PROJECT_DIR$/.idea/MyCodePractices.iml" />
     </modules>
   </component>
 </project>
