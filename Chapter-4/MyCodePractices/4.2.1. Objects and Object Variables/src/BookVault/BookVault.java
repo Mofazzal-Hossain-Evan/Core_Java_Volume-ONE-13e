@@ -35,7 +35,7 @@ case 5 -> System.exit(0);
         String title = scanner.nextLine();
         System.out.println("Enter book author: ");
         String author = scanner.nextLine();
-        books.add(new Book(title, author));
+        books.add(new Book(title, author, new Date()));
         System.out.println("Book added successfully");
     }
 

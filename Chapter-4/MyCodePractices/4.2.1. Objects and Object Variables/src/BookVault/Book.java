@@ -14,7 +14,7 @@ public class Book {
     public Book(String title, String author, Date addedDate) {
         this.title = title;
         this.author = author;
-        this.addedDate = new Date();
+        this.addedDate = addedDate;
     }
    public String getTitle() {
         return title;
@@ -23,7 +23,7 @@ public class Book {
    public String getAuthor(){
         return author;
    }
-   public Date getAddeddDate() {
+   public Date getAddedDate() {
         return addedDate;
    }
 @Override
