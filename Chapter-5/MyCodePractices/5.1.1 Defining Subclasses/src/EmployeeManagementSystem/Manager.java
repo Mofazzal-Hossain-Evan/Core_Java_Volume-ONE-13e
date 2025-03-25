@@ -1,4 +1,4 @@
-import EmployeeManagementSystem.Employee;
+package EmployeeManagementSystem;
 
 public class Manager extends Employee {
     private double bonus;
