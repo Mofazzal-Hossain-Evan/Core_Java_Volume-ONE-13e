@@ -9,6 +9,10 @@ public class Calculator {
 
         try{
 
+            Class<?>[] paramTypes = new Class[args.length];
+            for (int i = 0; i < args.length; i++){
+
+            }
         }
     }
 }
