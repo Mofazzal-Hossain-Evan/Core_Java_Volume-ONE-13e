@@ -1,4 +1,3 @@
 package ShapeJudge;
 
-public interface Shape {
-}
+sealed interface Shape permits Circle, Rectangle, Triangle {}

@@ -1,4 +1,5 @@
 package AnimalClassifier;
 
-public interface Animal {
+sealed interface Animal permits Mammal, Bird, Reptile {
+    String name();
 }

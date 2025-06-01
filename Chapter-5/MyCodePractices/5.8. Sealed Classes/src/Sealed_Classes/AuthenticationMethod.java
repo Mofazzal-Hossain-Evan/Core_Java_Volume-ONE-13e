@@ -1,4 +1,5 @@
 package Sealed_Classes;
 
-public class AuthenticationMethod {
+sealed interface AuthenticationMethod permits PasswordAuth, OTPAuth, BiometricAuth {
+    boolean authenticate();
 }

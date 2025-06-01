@@ -1,4 +1,8 @@
 package SealedTest;
 
-public record JSONNumber() {
+final record JSONNumber(double value) implements JSONPrimitive
+ {
+    public String toString(){
+        return "" + value;
+    }
 }

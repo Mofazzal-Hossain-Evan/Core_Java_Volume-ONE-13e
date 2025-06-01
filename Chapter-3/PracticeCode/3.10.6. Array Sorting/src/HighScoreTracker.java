@@ -24,7 +24,11 @@ public class HighScoreTracker {
                     System.out.println("Enter score: ");
                     int score = input.nextInt();
                     leaderBoard.add(new Player(name, score));
+                    // The new Player(name, score) statement creates a Player object with the given inputs.
+                    //The leaderboard.add(...) statement appends this Player object to the leaderboard list.
+                    //The list now stores this player's data.
                     leaderBoard.sort((p1, p2) -> Integer.compare(p2.score, p1.score));
+                    // This ensures the highest scores are displayed at the top when the leaderboard is printed.
                     break;
 
                 case 2:

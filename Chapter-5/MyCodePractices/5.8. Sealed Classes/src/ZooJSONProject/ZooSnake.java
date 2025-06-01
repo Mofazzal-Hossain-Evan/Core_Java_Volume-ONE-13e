@@ -1,4 +1,5 @@
 package ZooJSONProject;
 
-public record ZooSnake() {
+public final record ZooSnake(String species) implements ZooAnimal {
+    public String toString() { return species + " Snake goes HISS!"; }
 }

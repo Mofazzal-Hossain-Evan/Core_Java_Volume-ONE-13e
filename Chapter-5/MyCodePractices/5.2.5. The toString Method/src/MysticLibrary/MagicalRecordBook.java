@@ -1,4 +1,3 @@
 package MysticLibrary;
 
-public record MagicalRecordBook() {
-}
+public record MagicalRecordBook(String title, String enhancement) { }

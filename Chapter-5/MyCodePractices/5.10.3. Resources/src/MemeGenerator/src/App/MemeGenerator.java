@@ -1,3 +1,5 @@
+package App;
+
 import java.awt.*;
 import java.io.*;
 import java.net.URL;
@@ -9,13 +11,14 @@ import javax.swing.*;
  * A simple Meme Generator that loads random meme images and captions from resources.
  * @version 1.0 2025-05-13
  */
+public class MemeGenerator {
 private static final String[] IMAGE_PATHS = {
-        "/app/images/meme1.jpg",
-        "/app/images/meme2.jpg",
-        "/app/images/meme3.jpg"
+        "/images/meme1.jpg",
+        "/images/meme2.jpg",
+        "/images/meme3.jpg"
 };
 
-    private static final String CAPTIONS_PATH = "/app/data/captions.txt";
+    private static final String CAPTIONS_PATH = "/data/captions.txt";
     private static List<String> captions = new ArrayList<>();
     private static Random random = new Random();
 
@@ -25,6 +28,16 @@ private static final String[] IMAGE_PATHS = {
 
         // Create GUI
         SwingUtilities.invokeLater(() -> createAndShowGUI());
+    }
+
+    private static Font loadBanglaFont(float size) {
+        try (InputStream is = MemeGenerator.class.getResourceAsStream("/fonts/SolaimanLipi.ttf")) {
+            Font font = Font.createFont(Font.TRUETYPE_FONT, is);
+            return font.deriveFont(size); // Example: 16f
+        } catch (Exception e) {
+            System.out.println("Could not load Bangla font: " + e.getMessage());
+            return new Font("SolaimanLipi.ttf", Font.PLAIN, (int) size); // fallback
+        }
     }
 
     private static void loadCaptions() {
@@ -53,16 +66,21 @@ private static final String[] IMAGE_PATHS = {
         frame.setSize(600, 500);
         frame.setLayout(new BorderLayout());
 
+        // Caption label
+        JLabel captionLabel = new JLabel("মিম জেনারেটরে স্বাগতম!", SwingConstants.CENTER);
+        captionLabel.setFont(new Font("SolaimanLipi", Font.PLAIN, 15)); // Apply custom Bangla font
+
         // Meme image label
         JLabel imageLabel = new JLabel();
         imageLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         // Caption label
-        JLabel captionLabel = new JLabel("মিম জেনারেটরে স্বাগতম!", SwingConstants.CENTER);
-        captionLabel.setFont(new Font("Arial", Font.BOLD, 16));
+//        JLabel captionLabel = new JLabel("মিম জেনারেটরে স্বাগতম!", SwingConstants.CENTER);
+//        captionLabel.setFont(new Font("Arial", Font.BOLD, 16));
 
         // Button to generate new meme
         JButton generateButton = new JButton("নতুন মিম");
+        generateButton.setFont(new Font("SolaimanLipi", Font.PLAIN, 15));
         generateButton.addActionListener(e -> updateMeme(imageLabel, captionLabel));
 
         // Add components to frame

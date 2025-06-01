@@ -1,4 +1,9 @@
 package TheBureauOfBizarreOccupations;
 
-public class Funny {
+interface Funny {
+    String tellAJoke();
+}
+
+interface DangerousJob{
+    String safetyWarning();
 }

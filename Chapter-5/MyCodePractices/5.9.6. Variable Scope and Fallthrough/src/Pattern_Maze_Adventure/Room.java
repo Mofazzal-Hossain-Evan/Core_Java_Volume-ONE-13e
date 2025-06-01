@@ -1,4 +1,3 @@
 package Pattern_Maze_Adventure;
 
-public interface Room {
-}
+sealed interface Room permits TrapRoom, TreasureRoom, EmptyRoom, MagicRoom {}

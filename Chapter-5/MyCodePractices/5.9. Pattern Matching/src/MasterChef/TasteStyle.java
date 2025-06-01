@@ -1,4 +1,4 @@
 package MasterChef;
 
-public class TasteStyle {
+public sealed interface TasteStyle  permits Spicy, Sweet{
 }

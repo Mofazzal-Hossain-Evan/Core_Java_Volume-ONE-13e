@@ -1,4 +1,4 @@
 package RobotPositionChecker;
 
-public record Point() {
-}
+record Point(int x, int y) {}
+

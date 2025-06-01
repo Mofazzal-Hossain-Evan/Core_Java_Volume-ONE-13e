@@ -1,4 +1,8 @@
 package Video_Game_Character;
 
-public class FireMage {
+final class FireMage extends Mage {
+
+    public String getAbility(){
+        return "Fire spells that burn enemies";
+    }
 }

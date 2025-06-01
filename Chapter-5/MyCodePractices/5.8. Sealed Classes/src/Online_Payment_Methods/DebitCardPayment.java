@@ -1,3 +1,5 @@
+package Online_Payment_Methods;
+
 public final class DebitCardPayment extends PaymentMethod {
 
     @Override

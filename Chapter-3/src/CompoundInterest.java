@@ -55,3 +55,5 @@ public class CompoundInterest
         }
     }
 }
+
+//https://claude.site/artifacts/7e238d93-1ee8-4e9d-92d6-1fb991dadda0

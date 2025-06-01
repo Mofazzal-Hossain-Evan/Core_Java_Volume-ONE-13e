@@ -1,4 +1,7 @@
 package Virtual_Zoo_Guide;
 
-public class Penguin {
+final class Penguin implements Animal {
+    String squeak() {
+        return "Squeak!";
+    }
 }

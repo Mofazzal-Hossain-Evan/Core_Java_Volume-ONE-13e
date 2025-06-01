@@ -1,4 +1,8 @@
 package ZooJSONProject;
 
-public class ZooVoid {
+public enum ZooVoid implements ZooAnimal {
+    INSTANCE;
+    public String toString(){ return "Nothing here... 💤"; }
 }
+
+

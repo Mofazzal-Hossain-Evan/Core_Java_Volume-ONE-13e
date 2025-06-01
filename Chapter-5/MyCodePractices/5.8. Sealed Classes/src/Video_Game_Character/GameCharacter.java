@@ -1,4 +1,6 @@
 package Video_Game_Character;
 
-public interface GameCharacter {
+sealed interface GameCharacter permits Warrior, Mage,Archer, Assassin {
+
+    String getAbility();
 }

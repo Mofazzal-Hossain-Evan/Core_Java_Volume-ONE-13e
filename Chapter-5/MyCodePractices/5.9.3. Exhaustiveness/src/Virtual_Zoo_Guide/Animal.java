@@ -1,4 +1,3 @@
 package Virtual_Zoo_Guide;
 
-public interface Animal {
-}
+sealed interface Animal permits Lion, Elephant, Penguin {}

@@ -5,7 +5,8 @@ import javax.swing.tree.*; // Tree structure support
 import java.awt.*; // Layout এবং UI এর জন্য
 import java.lang.reflect.*; // Reflection API ব্যবহার করার জন্য
 
-public class ClassHierarchyVisualizer extends JFrame { // JFrame হলো main GUI উইন্ডো
+public class ClassHierarchyVisualizer extends JFrame { // JFrame হলো mai
+    // n GUI উইন্ডো
 
     private final JTextArea detailsArea = new JTextArea(); // ক্লাস ডিটেইল দেখানোর জন্য টেক্সট এরিয়া
 

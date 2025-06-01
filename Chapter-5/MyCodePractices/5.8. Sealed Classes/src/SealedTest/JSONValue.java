@@ -1,9 +1,5 @@
 package SealedTest;
 
-import java.util.*;
-
-import java.util.ArrayList;
-
 sealed interface JSONValue permits JSONArray, JSONObject, JSONPrimitive {
     public default String type(){
 

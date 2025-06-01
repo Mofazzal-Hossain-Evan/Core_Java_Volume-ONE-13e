@@ -1,4 +1,4 @@
 package TypeComparisonTester;
 
-public class Cat {
+public class Cat extends Animal{
 }

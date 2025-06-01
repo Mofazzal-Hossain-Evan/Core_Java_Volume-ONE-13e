@@ -1,3 +1,5 @@
+package Multi_LevelAccessControlSystem;
+
 public class CompanySystem {
     public static void main(String[] args) {
 
@@ -12,14 +14,14 @@ public class CompanySystem {
         if (emp2 instanceof Manager){
             Manager mgr = (Manager) emp2;
             mgr.approveLeave();
-            mgr.approveProject(); // Manager-specific method
+            mgr.approveProject(); // Multi_LevelAccessControlSystem.Manager-specific method
 
         }
 
         if (emp3 instanceof Admin){
             Admin adm = (Admin) emp3;
             adm.resetPassword();
-            adm.createReport();   // Admin-specific method
+            adm.createReport();   // Multi_LevelAccessControlSystem.Admin-specific method
 
         }
 

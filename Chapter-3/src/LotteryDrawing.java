@@ -44,3 +44,36 @@ public class LotteryDrawing
             System.out.println(r);
     }
 }
+
+/***
+ * This Java program simulates a lottery drawing. Let's break it down step by step:
+ *
+ * 1. Import and class declaration:
+ *    - The program imports the java.util package for Scanner and Arrays classes.
+ *    - It defines a public class named LotteryDrawing.
+ *
+ * 2. User input:
+ *    - It uses Scanner to get two inputs from the user:
+ *      - k: number of numbers to draw
+ *      - n: highest possible number
+ *
+ * 3. Initialize numbers array:
+ *    - Creates an array 'numbers' of size n
+ *    - Fills it with numbers from 1 to n
+ *
+ * 4. Drawing process:
+ *    - Creates a 'result' array of size k to store drawn numbers
+ *    - For each draw:
+ *      - Generates a random index r
+ *      - Puts the number at index r of 'numbers' into 'result'
+ *      - Replaces the drawn number with the last number in 'numbers'
+ *      - Decreases n to shrink the pool of available numbers
+ *
+ * 5. Output:
+ *    - Sorts the 'result' array
+ *    - Prints each number in the sorted result
+ *
+ * The key aspect is the drawing algorithm, which ensures no number is drawn twice by swapping drawn numbers with the last available number and shrinking the pool.
+ *
+ * This method efficiently simulates drawing numbers without replacement, similar to how many lottery systems work.
+ */

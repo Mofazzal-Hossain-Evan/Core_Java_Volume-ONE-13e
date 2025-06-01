@@ -1,4 +1,10 @@
 package SealedTest;
 
-public enum JSONNull {
-}
+ enum JSONNull implements JSONPrimitive {
+     INSTANCE;
+
+     @Override
+     public String toString() {
+         return "null";
+     }
+ }

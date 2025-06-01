@@ -1,4 +1,4 @@
-package EmployeeManagementSystem;
+package BattleshipGameSimulator;
 
 import java.sql.SQLOutput;
 

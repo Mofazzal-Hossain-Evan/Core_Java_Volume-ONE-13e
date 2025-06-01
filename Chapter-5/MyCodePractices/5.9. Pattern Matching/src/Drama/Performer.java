@@ -1,4 +1,10 @@
 package Drama;
 
-public class Performer {
+public sealed class Performer permits Comedian, TragicActor, ActionHero, Amateur{
+public String getName(){
+    return "Unnamed Performer";
+}
+public String getAct(){
+    return "Standing silently on stage...";
+}
 }

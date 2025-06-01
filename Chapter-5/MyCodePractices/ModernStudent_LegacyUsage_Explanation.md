@@ -104,7 +104,7 @@ class ModernStudent {
     }
 }
 
-public class Main {
+public class University_of_Weird_Majors.Main {
     public static void main(String[] args) {
         LegacyStudent ls = new LegacyStudent("Rahim", 101);
         ModernStudent ms = new ModernStudent(ls);

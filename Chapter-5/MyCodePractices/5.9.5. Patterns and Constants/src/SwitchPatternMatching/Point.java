@@ -1,4 +1,4 @@
 package SwitchPatternMatching;
 
-public record Point() {
+public record Point(int x, int y) {
 }

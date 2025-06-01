@@ -1,4 +1,3 @@
 package ShapeSystem_usingRecordPattern;
 
-public record Circle() {
-}
+record Circle(Point center, double radius){}

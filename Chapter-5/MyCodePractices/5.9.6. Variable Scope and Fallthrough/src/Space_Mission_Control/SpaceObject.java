@@ -1,4 +1,3 @@
 package Space_Mission_Control;
 
-public record SpaceObject() {
-}
+sealed interface SpaceObject permits Satellite, SpaceShip, Asteroid {}

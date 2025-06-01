@@ -1,4 +1,4 @@
 package Pattern_Maze_Adventure;
 
-public class EmptyRoom {
+public record EmptyRoom() implements Room {
 }

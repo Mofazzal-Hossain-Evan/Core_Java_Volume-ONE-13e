@@ -1,4 +1,11 @@
 package Traffic_Light;
 
-public class Red {
+final class Red implements TrafficLight {
+    public TrafficLight next(){
+        return new Green();
+    }
+
+    public String color(){
+        return "Red";
+    }
 }

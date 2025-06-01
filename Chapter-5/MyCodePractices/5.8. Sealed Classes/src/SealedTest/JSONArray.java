@@ -1,4 +1,6 @@
 package SealedTest;
 
-public class JSONArray {
+import java.util.ArrayList;
+
+final class JSONArray extends ArrayList<JSONValue> implements JSONValue {
 }

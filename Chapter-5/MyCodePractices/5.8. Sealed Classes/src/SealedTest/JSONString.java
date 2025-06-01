@@ -1,4 +1,7 @@
 package SealedTest;
 
-public record JSONString() {
+final record JSONString(String value) implements JSONPrimitive {
+    public String toString(){
+        return "\"" + value.translateEscapes() +  "\"";
+    }
 }

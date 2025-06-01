@@ -1,4 +1,5 @@
 package HR_Designation_Analyzer;
 
-public interface Employee {
-}
+sealed interface Employee permits Executive, Intern { }
+
+

@@ -1,4 +1,8 @@
 package Video_Game_Character;
+final class Warrior implements GameCharacter {
 
-public class Warrior {
+    public String getAbility(){
+        return "Strong melee attack, high defense";
+    }
 }
+

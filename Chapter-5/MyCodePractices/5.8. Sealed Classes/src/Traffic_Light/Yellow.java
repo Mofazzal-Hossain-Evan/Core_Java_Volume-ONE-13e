@@ -1,4 +1,14 @@
 package Traffic_Light;
 
-public class Yellow {
+final class Yellow implements TrafficLight{
+
+    @Override
+    public TrafficLight next() {
+        return new Red();
+    }
+
+    @Override
+    public String color() {
+        return "Yellow";
+    }
 }

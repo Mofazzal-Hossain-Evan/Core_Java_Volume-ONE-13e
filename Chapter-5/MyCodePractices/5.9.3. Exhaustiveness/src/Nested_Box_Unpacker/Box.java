@@ -1,4 +1,3 @@
 package Nested_Box_Unpacker;
 
-public class Box {
-}
+record Box<T>(T contents) {}

@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class DeepComparer {
 
-    public static void compareObject(Object a, Object b){
+    public static void compareObjects(Object a, Object b){
         System.out.println("🔍 Comparing objects:");
         System.out.println("A: "+ deepPrint(a));
         System.out.println("B: " + deepPrint(b));
@@ -27,11 +27,11 @@ public class DeepComparer {
 
     }
 
-    public static String deepPrint(Object o){
-        if (o == null) return "null";
-        if (o.getClass().isArray()) {
-            return Arrays.deepToString(new Object[]{o});
+    public static String deepPrint(Object obj){
+        if (obj == null) return "null";
+        if (obj.getClass().isArray()) {
+            return Arrays.deepToString(new Object[]{obj});
         }
-        return o.toString();
+        return obj.toString();
     }
 }

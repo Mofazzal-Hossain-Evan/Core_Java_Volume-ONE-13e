@@ -1,4 +1,8 @@
 package SealedTest;
 
-public interface JSONPrimitive {
+
+
+sealed interface JSONPrimitive extends
+        JSONValue permits JSONNumber, JSONString,JSONBoolean, JSONNull {
 }
+

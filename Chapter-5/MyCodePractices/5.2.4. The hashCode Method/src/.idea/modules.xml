@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/5.2.4. The hashCode Method.iml" filepath="$PROJECT_DIR$/5.2.4. The hashCode Method.iml" />
       <module fileurl="file://$PROJECT_DIR$/HashMapEquality_Explorer/HashMapEquality_Explorer.iml" filepath="$PROJECT_DIR$/HashMapEquality_Explorer/HashMapEquality_Explorer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashMap_Equality_Explorer/HashMap_Equality_Explorer.iml" filepath="$PROJECT_DIR$/HashMap_Equality_Explorer/HashMap_Equality_Explorer.iml" />
     </modules>
   </component>
 </project>

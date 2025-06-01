@@ -4,8 +4,27 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/4.2.1. Objects and Object Variables/4.2.1. Objects and Object Variables.iml" filepath="$PROJECT_DIR$/4.2.1. Objects and Object Variables/4.2.1. Objects and Object Variables.iml" />
       <module fileurl="file://$PROJECT_DIR$/4.3.1. An Employee Class/4.3.1. An Employee Class.iml" filepath="$PROJECT_DIR$/4.3.1. An Employee Class/4.3.1. An Employee Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.3.11. Final Instance Fields/4.3.11. Final Instance Fields.iml" filepath="$PROJECT_DIR$/4.3.11. Final Instance Fields/4.3.11. Final Instance Fields.iml" />
       <module fileurl="file://$PROJECT_DIR$/4.3.2. Use of Multiple Source Files/4.3.2. Use of Multiple Source Files.iml" filepath="$PROJECT_DIR$/4.3.2. Use of Multiple Source Files/4.3.2. Use of Multiple Source Files.iml" />
       <module fileurl="file://$PROJECT_DIR$/4.3.4. First Steps with Constructors/4.3.4. First Steps with Constructors.iml" filepath="$PROJECT_DIR$/4.3.4. First Steps with Constructors/4.3.4. First Steps with Constructors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.3.5. Declaring Local Variables, 4.3.6. Working with null References,  4.3.7. Implicit and Explicit Parameters/4.3.5. Declaring Local Variables, 4.3.6. Working with null References,  4.3.7. Implicit and Explicit Parameters.iml" filepath="$PROJECT_DIR$/4.3.5. Declaring Local Variables, 4.3.6. Working with null References,  4.3.7. Implicit and Explicit Parameters/4.3.5. Declaring Local Variables, 4.3.6. Working with null References,  4.3.7. Implicit and Explicit Parameters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.3.8. Benefits of Encapsulation 4.3.9. Class-Based Access Privileges 4.3.10. Private Methods/4.3.8. Benefits of Encapsulation 4.3.9. Class-Based Access Privileges 4.3.10. Private Methods.iml" filepath="$PROJECT_DIR$/4.3.8. Benefits of Encapsulation 4.3.9. Class-Based Access Privileges 4.3.10. Private Methods/4.3.8. Benefits of Encapsulation 4.3.9. Class-Based Access Privileges 4.3.10. Private Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.4.1. Static Fields/4.4.1. Static Fields.iml" filepath="$PROJECT_DIR$/4.4.1. Static Fields/4.4.1. Static Fields.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.4.2. Static Constants/4.4.2. Static Constants.iml" filepath="$PROJECT_DIR$/4.4.2. Static Constants/4.4.2. Static Constants.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.4.3. Static Methods/4.4.3. Static Methods.iml" filepath="$PROJECT_DIR$/4.4.3. Static Methods/4.4.3. Static Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.4.4. Factory Methods/4.4.4. Factory Methods.iml" filepath="$PROJECT_DIR$/4.4.4. Factory Methods/4.4.4. Factory Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.5. Method Parameters/4.5. Method Parameters.iml" filepath="$PROJECT_DIR$/4.5. Method Parameters/4.5. Method Parameters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.1. Overloading/4.6.1. Overloading.iml" filepath="$PROJECT_DIR$/4.6.1. Overloading/4.6.1. Overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.2. Default Field Initialization/4.6.2. Default Field Initialization.iml" filepath="$PROJECT_DIR$/4.6.2. Default Field Initialization/4.6.2. Default Field Initialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.3. The Constructor with No Arguments/4.6.3. The Constructor with No Arguments.iml" filepath="$PROJECT_DIR$/4.6.3. The Constructor with No Arguments/4.6.3. The Constructor with No Arguments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.4. Explicit Field Initialization/4.6.4. Explicit Field Initialization.iml" filepath="$PROJECT_DIR$/4.6.4. Explicit Field Initialization/4.6.4. Explicit Field Initialization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.5. Parameter Names/4.6.5. Parameter Names.iml" filepath="$PROJECT_DIR$/4.6.5. Parameter Names/4.6.5. Parameter Names.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.6. Calling Another Constructor/4.6.6. Calling Another Constructor.iml" filepath="$PROJECT_DIR$/4.6.6. Calling Another Constructor/4.6.6. Calling Another Constructor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.6.7. Initialization Blocks/4.6.7. Initialization Blocks.iml" filepath="$PROJECT_DIR$/4.6.7. Initialization Blocks/4.6.7. Initialization Blocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.7. Records/4.7. Records.iml" filepath="$PROJECT_DIR$/4.7. Records/4.7. Records.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.7.1 The Record Concept/4.7.1 The Record Concept.iml" filepath="$PROJECT_DIR$/4.7.1 The Record Concept/4.7.1 The Record Concept.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4.7.2 Constructors Canonical Custom and Compact/4.7.2 Constructors Canonical Custom and Compact.iml" filepath="$PROJECT_DIR$/4.7.2 Constructors Canonical Custom and Compact/4.7.2 Constructors Canonical Custom and Compact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extra Practices/Extra Practices.iml" filepath="$PROJECT_DIR$/Extra Practices/Extra Practices.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MyCodePractices.iml" filepath="$PROJECT_DIR$/.idea/MyCodePractices.iml" />
     </modules>
   </component>

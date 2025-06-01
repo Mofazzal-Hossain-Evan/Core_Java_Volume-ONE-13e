@@ -1,4 +1,4 @@
-package ProperEmployeewithequals_hashCode;
+package BuggyEmployeewithoutequals_hashCode.ProperEmployeewithequals_hashCode;
 
 import java.util.Objects;
 

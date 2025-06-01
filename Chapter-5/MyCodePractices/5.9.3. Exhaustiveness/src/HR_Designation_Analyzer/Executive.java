@@ -1,4 +1,3 @@
 package HR_Designation_Analyzer;
 
-public record Executive() {
-}
+ record Executive(String title) implements Employee {}

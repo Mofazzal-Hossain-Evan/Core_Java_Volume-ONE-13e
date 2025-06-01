@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/3.10.2. Accessing Array Elements/3.10.2. Accessing Array Elements.iml" filepath="$PROJECT_DIR$/3.10.2. Accessing Array Elements/3.10.2. Accessing Array Elements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.10.3. The for each Loop/3.10.3. The for each Loop.iml" filepath="$PROJECT_DIR$/3.10.3. The for each Loop/3.10.3. The for each Loop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.10.4. Array Copying/3.10.4. Array Copying.iml" filepath="$PROJECT_DIR$/3.10.4. Array Copying/3.10.4. Array Copying.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.10.6. Array Sorting/3.10.6. Array Sorting.iml" filepath="$PROJECT_DIR$/3.10.6. Array Sorting/3.10.6. Array Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.10.7. Multidimensional Arrays/3.10.7. Multidimensional Arrays.iml" filepath="$PROJECT_DIR$/3.10.7. Multidimensional Arrays/3.10.7. Multidimensional Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.10.8. Ragged Arrays/3.10.8. Ragged Arrays.iml" filepath="$PROJECT_DIR$/3.10.8. Ragged Arrays/3.10.8. Ragged Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/3.4.3. Constants/3.4.3. Constants.iml" filepath="$PROJECT_DIR$/3.4.3. Constants/3.4.3. Constants.iml" />
       <module fileurl="file://$PROJECT_DIR$/3.4.4. Enumerated Types/3.4.4. Enumerated Types.iml" filepath="$PROJECT_DIR$/3.4.4. Enumerated Types/3.4.4. Enumerated Types.iml" />
       <module fileurl="file://$PROJECT_DIR$/3.5. Operators/3.5. Operators.iml" filepath="$PROJECT_DIR$/3.5. Operators/3.5. Operators.iml" />
@@ -18,6 +24,9 @@
       <module fileurl="file://$PROJECT_DIR$/3.7.1. Reading Input/3.7.1. Reading Input.iml" filepath="$PROJECT_DIR$/3.7.1. Reading Input/3.7.1. Reading Input.iml" />
       <module fileurl="file://$PROJECT_DIR$/3.7.2. Formatting Output/3.7.2. Formatting Output.iml" filepath="$PROJECT_DIR$/3.7.2. Formatting Output/3.7.2. Formatting Output.iml" />
       <module fileurl="file://$PROJECT_DIR$/3.7.3. File Input and Output/3.7.3. File Input and Output.iml" filepath="$PROJECT_DIR$/3.7.3. File Input and Output/3.7.3. File Input and Output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.8.5. Multiple Selections with switch/3.8.5. Multiple Selections with switch.iml" filepath="$PROJECT_DIR$/3.8.5. Multiple Selections with switch/3.8.5. Multiple Selections with switch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.8.6. Statements That Break Control Flow/3.8.6. Statements That Break Control Flow.iml" filepath="$PROJECT_DIR$/3.8.6. Statements That Break Control Flow/3.8.6. Statements That Break Control Flow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3.9. Big Numbers/3.9. Big Numbers.iml" filepath="$PROJECT_DIR$/3.9. Big Numbers/3.9. Big Numbers.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MyCodePractices.iml" filepath="$PROJECT_DIR$/.idea/MyCodePractices.iml" />
     </modules>
   </component>

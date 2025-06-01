@@ -1,4 +1,7 @@
 package Virtual_Zoo_Guide;
 
-public class Lion {
+final class Lion implements Animal {
+    String roar(){
+        return "ROAR";
+    }
 }

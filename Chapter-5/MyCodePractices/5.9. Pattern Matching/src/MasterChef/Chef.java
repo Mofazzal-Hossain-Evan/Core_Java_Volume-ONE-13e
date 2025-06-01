@@ -1,4 +1,7 @@
 package MasterChef;
 
-public class Chef {
+public sealed class Chef permits HeadChef, PastryChef, SousChef, InternChef, UnknownChef {
+    public String getName() {
+        return "Unnamed Chef";
+    }
 }

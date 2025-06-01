@@ -1,4 +1,3 @@
 package EmployeeParkingEligibilityChecker;
 
-public class Employee {
-}
+sealed interface Employee permits Executive, Manager, Worker {}

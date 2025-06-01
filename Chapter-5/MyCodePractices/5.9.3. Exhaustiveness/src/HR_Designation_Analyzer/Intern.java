@@ -1,4 +1,3 @@
 package HR_Designation_Analyzer;
 
-public record Intern() {
-}
+ record Intern(String university) implements Employee{ }

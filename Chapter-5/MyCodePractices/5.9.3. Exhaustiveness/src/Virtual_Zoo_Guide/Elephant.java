@@ -1,4 +1,7 @@
 package Virtual_Zoo_Guide;
 
-public class Elephant {
+final class Elephant implements Animal{
+    String trumpet(){
+        return "PRRR!";
+    }
 }

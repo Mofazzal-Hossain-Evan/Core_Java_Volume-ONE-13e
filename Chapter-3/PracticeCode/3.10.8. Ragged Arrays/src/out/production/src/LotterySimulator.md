@@ -13,3 +13,12 @@ Code Explanation:
 Create a ragged array where each row represents the combinations for choosing k items from n items.
 Use a loop to populate the values row by row.
 
+
+**Step 2: Simulate a Lottery Draw**
+
+Now that we have the combinations, let’s simulate a random lottery draw where the user can pick numbers and match them against randomly generated ones.
+
+Code Explanation:
+Allow the user to input their lottery numbers.
+Randomly generate numbers for the "winning" lottery.
+Check if the user’s numbers match.
