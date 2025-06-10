@@ -1,4 +1,4 @@
-package DynamicGamingSystem;
+package core;
 
 import java.lang.reflect.Method;
 

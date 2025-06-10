@@ -1,0 +1,27 @@
+DynamicGamingSystem/
+├── src/
+│   ├── core/
+│   │   ├── Character.java
+│   │   ├── Event.java
+│   │   ├── Calculator.java
+│   │   ├── Plugin.java
+│   │   └── Main.java
+│   ├── characters/
+│   │   ├── Warrior.java
+│   │   └── Mage.java
+│   ├── events/
+│   │   ├── Battle.java
+│   │   └── Quest.java
+│   ├── calculators/
+│   │   ├── BasicCalculator.java
+│   │   └── ScientificCalculator.java
+│   ├── plugins/
+│   │   ├── LogPlugin.java
+│   │   └── StatsPlugin.java
+├── resources/
+│   ├── characters.txt
+│   ├── events.txt
+│   └── plugins.txt
+├── .idea/
+├── out/
+├── DynamicGamingSystem.iml
