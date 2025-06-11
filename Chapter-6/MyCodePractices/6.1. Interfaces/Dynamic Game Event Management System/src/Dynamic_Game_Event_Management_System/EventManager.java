@@ -1,9 +1,12 @@
 package Dynamic_Game_Event_Management_System;
 
 import javax.swing.*;
+import javax.swing.Timer;
 import java.time.ZoneOffset;
 import java.util.*;
-import java.util.Timer;
+
+
+
 
 public class EventManager {
     // চরিত্রের তালিকা সংরক্ষণের জন্য লিস্ট
@@ -25,13 +28,15 @@ public class EventManager {
                     .toEpochMilli() - System.currentTimeMillis();
             // যদি ডিলে নেগেটিভ হয়, তবে ০ সেট করা
             if (delay < 0) delay = 0;
+            // ডিলে ইন্টের সীমার মধ্যে আছে কিনা চেক করা
+            int safeDelay = (delay > Integer.MAX_VALUE) ? Integer.MAX_VALUE : (int) delay;
 
             // টাইমার তৈরি এবং ইভেন্ট শুরুর সময় নোটিফিকেশন
-            timer = new Timer((int) delay, e -> {
+            timer = new Timer(safeDelay, e -> {
                 // সব লিসেনারকে ইভেন্ট শুরুর নোটিফিকেশন পাঠানো
                 listeners.forEach(listener -> listener.onEventStart(event));
-                // GUI ডায়ালগে ইভেন্ট শুরুর নোটিফিকেশন দেখানো
-                JOptionPane.showMessageDialog(null, "ইভেন্ট শুরু: " + event.getName(),
+                // GUI ডায়ালগে ইভেন্ট শুরুর নোটিফিকেশন দেখানো, স্ট্রিং নিশ্চিত করা
+                JOptionPane.showMessageDialog(null, "ইভেন্ট শুরু: " + String.valueOf(event.getName()),
                         "ইভেন্ট নোটিফিকেশন", JOptionPane.INFORMATION_MESSAGE);
             });
             // টাইমার একবারই চলবে
