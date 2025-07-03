@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/6.1. Interfaces/Dynamic Game Event Management System/Dynamic Game Event Management System.iml" filepath="$PROJECT_DIR$/6.1. Interfaces/Dynamic Game Event Management System/Dynamic Game Event Management System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1. Interfaces/Dynamic Library Management System/Dynamic Library Management System.iml" filepath="$PROJECT_DIR$/6.1. Interfaces/Dynamic Library Management System/Dynamic Library Management System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1. Interfaces/Galactic Spaceship Fleet Manager/Galactic Spaceship Fleet Manager.iml" filepath="$PROJECT_DIR$/6.1. Interfaces/Galactic Spaceship Fleet Manager/Galactic Spaceship Fleet Manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1. Interfaces/Music Playlist Organizer/Music Playlist Organizer.iml" filepath="$PROJECT_DIR$/6.1. Interfaces/Music Playlist Organizer/Music Playlist Organizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyCodePractices.iml" filepath="$PROJECT_DIR$/.idea/MyCodePractices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1. Interfaces/Stock Monitoring System/Stock Monitoring System.iml" filepath="$PROJECT_DIR$/6.1. Interfaces/Stock Monitoring System/Stock Monitoring System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/6.1. Interfaces/the Superhero Showdown/the Superhero Showdown.iml" filepath="$PROJECT_DIR$/6.1. Interfaces/the Superhero Showdown/the Superhero Showdown.iml" />
+    </modules>
+  </component>
+</project>
