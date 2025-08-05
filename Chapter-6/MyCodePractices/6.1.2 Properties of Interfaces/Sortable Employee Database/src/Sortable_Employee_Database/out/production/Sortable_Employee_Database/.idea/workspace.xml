@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="40243207-17da-4d80-9fea-3f00712d7e0e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/grok_report.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../6.1.2 Properties of Interfaces.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Sortable Employee Database.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmployeeDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Game Event Management System/src/Dynamic_Game_Event_Management_System/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Game Event Management System/src/Dynamic_Game_Event_Management_System/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/FictionBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/FictionBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LibraryManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LibraryManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoanOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoanOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoggingProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoggingProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/NonFictionBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/NonFictionBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/Bicycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/Bicycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/ElectricScooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/ElectricScooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/Powered.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/Powered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/VehicleSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Alien Robot Factory/src/Vehicle_Simulation_System/VehicleSimulation.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Mofazzal-Hossain-Evan"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mofazzal-Hossain-Evan/Core_Java_Volume-ONE-13e.git",
+    "accountId": "cba470af-f0ed-448f-a21f-72ff7e9f9a67"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2zRu6oanXAtXKvU16UINcnBU4ZW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/evan/OneDrive/Documents/GitHub/Core_Java_Volume-ONE-13e/Chapter-6/MyCodePractices/6.1.2 Properties of Interfaces/Sortable Employee Database/src/Sortable_Employee_Database"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40243207-17da-4d80-9fea-3f00712d7e0e" name="Changes" comment="" />
+      <created>1751706033843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751706033843</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5706091-fae2-4722-be2c-b54513c6a493" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/FileBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Game Event Management System/src/Dynamic_Game_Event_Management_System/EventManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Game Event Management System/src/Dynamic_Game_Event_Management_System/EventManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/FictionBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/FictionBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LibraryManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LibraryManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoanOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoanOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoggingProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/LoggingProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/NonFictionBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/NonFictionBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1. Interfaces/Dynamic Library Management System/src/Dynamic_Library/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/Bicycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/Bicycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/ElectricScooter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/ElectricScooter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/Powered.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/Powered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/VehicleSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Alien Robot Factory/src/Vehicle_Simulation_System/VehicleSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/GameCharactersSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/GameCharactersSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/PoweredMoveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/PoweredMoveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../6.1.2 Properties of Interfaces/Game Character Movement System/src/Game_Character_System/Robot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Comparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/EmployeeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/EmployeeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/HardWorking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/HardWorking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Employee Management System with Sorting and Personal Details/src/EmployeeSystem/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/Attackable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/Attackable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/EntityProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/EntityProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/GameEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/GameEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/Moveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/Moveable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/NPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Game Entity System with Mix-in Style Behaviors/src/Game_Entity_System/NPC.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2zsLWD8Id0ptkFtYJgAT93UDCfr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TextProcessingApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/evan/OneDrive/Documents/GitHub/Core_Java_Volume-ONE-13e/Chapter-6/MyCodePractices/6.1.3. Interfaces and Abstract Classes/Text Processing Tool with CharSequence/src/Text_Processing_Tool&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5706091-fae2-4722-be2c-b54513c6a493" name="Changes" comment="" />
+      <created>1752514863383</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752514863383</updated>
+    </task>
+    <servers />
+  </component>
+</project>
