@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6.1.3. Interfaces and Abstract Classes/File Processing System with Flexible Input Types" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6.1.3. Interfaces and Abstract Classes/music library system" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6.1.4. Static and Private Methods" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6.1.4. Static and Private Methods/File_Path_Manager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/6.1.4. Static and Private Methods/File_Path_Manager/src/File_Path_Manager" vcs="Git" />
   </component>
 </project>
