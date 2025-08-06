@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286f5cca-d3af-40b6-8b19-ab63583febfc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/File_Path_Manager/src/File_Path_Manager/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/File_Path_Manager/src/File_Path_Manager/Core_Java_Volume-ONE-13e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/File_Path_Manager/src/File_Path_Manager/FilePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/File_Path_Manager/src/File_Path_Manager/FilePath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/File_Path_Manager/src/File_Path_Manager/out/production/File_Path_Manager/File_Path_Manager/File_Path_Manager.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Geometry_Calculator/src/Geometry_Calculator/.idea/vcs.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +17,7 @@
         <entry key="$PROJECT_DIR$/../../.." value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/File_Path_Manager" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -47,7 +46,8 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/evan/OneDrive/Documents/GitHub/Core_Java_Volume-ONE-13e/Chapter-6/MyCodePractices"
+    "last_opened_file_path": "C:/Users/evan/OneDrive/Documents/GitHub/Core_Java_Volume-ONE-13e/Chapter-6/MyCodePractices",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -60,5 +60,11 @@
       <updated>1754323910770</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/File_Path_Manager" />
+      <path value="$PROJECT_DIR$/File_Path_Manager/src/File_Path_Manager" />
+    </ignored-roots>
   </component>
 </project>
