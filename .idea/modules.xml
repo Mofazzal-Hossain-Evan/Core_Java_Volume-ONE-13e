@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/music library system.iml" filepath="$PROJECT_DIR$/music library system.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/Chapter-1/Chapter-1.iml" filepath="$PROJECT_DIR$/Chapter-1/Chapter-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/core-java-volume-ONE-13e.iml" filepath="$PROJECT_DIR$/.idea/core-java-volume-ONE-13e.iml" />
->>>>>>> 15a35cb (input)
     </modules>
   </component>
 </project>
