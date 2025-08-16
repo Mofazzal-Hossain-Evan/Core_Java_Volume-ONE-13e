@@ -1,0 +1,80 @@
+Event Listener System
+
+Develop a system to handle events with default methods for optional listener behaviors.
+
+Define an EventListener interface with an abstract method onEvent(Event event) and a default method onError(Exception e) that logs a generic error message.
+Add a default method isActive() that returns true by default.
+Implement classes like UserEventListener and SystemEventListener that implement EventListener, with some overriding onError() or isActive().
+Write a program to simulate events and test how listeners handle events and errors, observing the default method behavior.
+Simulate interface evolution by adding a new default method (e.g., onEventProcessed()) and test its effect on existing listener classes.
+
+Goal: Learn how default methods provide fallback behavior and support backward compatibility.
+
+
+Task Queue System
+
+Create a task queue system where tasks have default behaviors via interfaces.
+
+Define a TaskQueue<T> interface with an abstract method add(T task) and a default method isEmpty() that checks if size() == 0 (add an abstract size() method).
+Add a default method cancel() that throws an UnsupportedOperationException for queues that don’t support cancellation.
+Implement classes like SimpleQueue and PriorityQueue that implement TaskQueue, with PriorityQueue overriding cancel() to support task removal.
+Write a program to add tasks and test isEmpty() and cancel(), noting when default methods are used.
+Add a new default method (e.g., peek()) to simulate interface evolution and ensure compatibility with existing queue classes.
+
+Goal: Understand default methods for convenience and interface evolution.
+
+
+File Processor Interface
+
+Build a system to process files with default methods for optional operations.
+
+Create a FileProcessor interface with an abstract method readContent() and a default method writeContent(String content) that throws an UnsupportedOperationException.
+Add a default method isReadable() that returns true by default.
+Implement classes like TextFileProcessor and BinaryFileProcessor, with TextFileProcessor overriding writeContent() to support writing.
+Write a program to process files, testing isReadable() and writeContent() behaviors across different processors.
+Simulate interface evolution by adding a new default method (e.g., getMetadata()) and verify it works with existing classes.
+
+Goal: Explore default methods for optional operations and backward compatibility.
+
+
+Notification System
+
+Develop a notification system with default methods for handling notifications.
+
+Define a Notifier interface with an abstract method send(String message) and a default method retry() that logs a generic retry attempt.
+Add a default method isAvailable() that returns true by default.
+Implement classes like EmailNotifier and SMSNotifier, with EmailNotifier overriding retry() to implement specific retry logic.
+Write a program to send notifications and test retry behavior, observing when default methods are used.
+Add a new default method (e.g., logSent()) to simulate interface evolution and test its effect on existing notifiers.
+
+Goal: Learn how default methods provide fallback behavior and support interface evolution.
+
+
+Shape Drawing Framework
+
+Create a framework for drawing shapes with default methods for optional features.
+
+Define a Drawable interface with an abstract method draw() and a default method erase() that throws an UnsupportedOperationException.
+Add a default method isVisible() that returns true by default.
+Implement classes like Circle and Rectangle that implement Drawable, with Circle overriding erase() to support erasing.
+Write a program to draw and erase shapes, testing when default methods are used or overridden.
+Simulate interface evolution by adding a new default method (e.g., rotate()) and verify compatibility with existing shape classes.
+
+Goal: Understand default methods for optional operations and interface evolution.
+
+
+Inventory Item Tracker
+
+Build a system to track inventory items with default methods for common operations.
+
+Create an InventoryItem interface with an abstract method getQuantity() and a default method isLowStock() that returns getQuantity() < 10.
+Add a default method restock() that throws an UnsupportedOperationException for items that can’t be restocked.
+Implement classes like PerishableItem and NonPerishableItem, with NonPerishableItem overriding restock() to support restocking.
+Write a program to check stock levels and restock items, observing default method behavior.
+Add a new default method (e.g., getCategory()) to simulate interface evolution and test its effect on existing classes.
+
+Goal: Explore how default methods provide convenience and ensure backward compatibility.
+
+
+
+These projects encourage you to experiment with default methods in interfaces to provide default implementations, support optional operations, and ensure interface evolution without breaking existing implementations. By implementing these systems, you’ll gain a practical understanding of how default methods enhance flexibility and compatibility in Java interfaces. Choose one or more projects that interest you and start coding to explore these concepts hands-on!
