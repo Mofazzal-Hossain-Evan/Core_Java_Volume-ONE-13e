@@ -1,4 +1,4 @@
-Event Listener System
+4 Event Listener System
 
 Develop a system to handle events with default methods for optional listener behaviors.
 
@@ -11,7 +11,7 @@ Simulate interface evolution by adding a new default method (e.g., onEventProces
 Goal: Learn how default methods provide fallback behavior and support backward compatibility.
 
 
-Task Queue System
+5 Task Queue System
 
 Create a task queue system where tasks have default behaviors via interfaces.
 
@@ -24,7 +24,7 @@ Add a new default method (e.g., peek()) to simulate interface evolution and ensu
 Goal: Understand default methods for convenience and interface evolution.
 
 
-File Processor Interface
+6 File Processor Interface
 
 Build a system to process files with default methods for optional operations.
 
@@ -37,7 +37,7 @@ Simulate interface evolution by adding a new default method (e.g., getMetadata()
 Goal: Explore default methods for optional operations and backward compatibility.
 
 
-Notification System
+7 Notification System
 
 Develop a notification system with default methods for handling notifications.
 
@@ -50,7 +50,7 @@ Add a new default method (e.g., logSent()) to simulate interface evolution and t
 Goal: Learn how default methods provide fallback behavior and support interface evolution.
 
 
-Shape Drawing Framework
+8 Shape Drawing Framework
 
 Create a framework for drawing shapes with default methods for optional features.
 
@@ -63,7 +63,7 @@ Simulate interface evolution by adding a new default method (e.g., rotate()) and
 Goal: Understand default methods for optional operations and interface evolution.
 
 
-Inventory Item Tracker
+9 Inventory Item Tracker
 
 Build a system to track inventory items with default methods for common operations.
 
