@@ -1,0 +1,11 @@
+/* Package declaration to match directory structure */
+package Sensor_Data_Processor_System;
+
+/* Theory: *Effective Java* (Item 21) discusses the importance of designing interfaces carefully to avoid conflicts in default methods when multiple interfaces are implemented (Bloch, p. 112). */
+
+/* Interface WiredProtocol with default getProtocolName */
+public interface WiredProtocol {
+    default String getProtocolName() {
+        return "Wired: Ethernet";
+    }
+}
