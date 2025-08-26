@@ -50,3 +50,4 @@ public class HeroTrainer implements ActionListener {
         counter++;
     }
 }
+
