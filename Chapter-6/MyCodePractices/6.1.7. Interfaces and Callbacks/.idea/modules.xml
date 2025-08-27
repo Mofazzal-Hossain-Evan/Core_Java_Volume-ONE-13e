@@ -4,8 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1 - Dancing Robot Choreographer system/1 - Dancing Robot Choreographer system.iml" filepath="$PROJECT_DIR$/1 - Dancing Robot Choreographer system/1 - Dancing Robot Choreographer system.iml" />
       <module fileurl="file://$PROJECT_DIR$/2 -Meme Quote Generator/2 -Meme Quote Generator.iml" filepath="$PROJECT_DIR$/2 -Meme Quote Generator/2 -Meme Quote Generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3 -Alien Invasion Alert System/3 -Alien Invasion Alert System.iml" filepath="$PROJECT_DIR$/3 -Alien Invasion Alert System/3 -Alien Invasion Alert System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4 -Virtual Pet Caretaker/4 -Virtual Pet Caretaker.iml" filepath="$PROJECT_DIR$/4 -Virtual Pet Caretaker/4 -Virtual Pet Caretaker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/6.1.7. Interfaces and Callbacks.iml" filepath="$PROJECT_DIR$/.idea/6.1.7. Interfaces and Callbacks.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Alien Invasion Alert System/Alien Invasion Alert System.iml" filepath="$PROJECT_DIR$/Alien Invasion Alert System/Alien Invasion Alert System.iml" />
       <module fileurl="file://$PROJECT_DIR$/Superhero Training Simulator/Superhero Training Simulator.iml" filepath="$PROJECT_DIR$/Superhero Training Simulator/Superhero Training Simulator.iml" />
     </modules>
   </component>
