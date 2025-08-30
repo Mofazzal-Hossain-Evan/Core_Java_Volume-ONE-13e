@@ -1,0 +1,62 @@
+ Pseudocode
+// Class: TreasureFinder
+DEFINE TreasureFinder
+
+// Attributes
+
+clues: LIST of STRINGS = ["X marks the spot near Davy Jones’ Locker! ☠️",
+"Follow the parrot’s squawk, matey! 🦜",
+"The rum barrels hide a secret passage! 🍺",
+"A black flag flies where the gold lies! 🏴‍☠️",
+"The sea shanty guides ye to the chest! 🎶"]
+
+clueIndex: INTEGER = 0
+timer: TIMER (triggers every 3000 mil       liseconds)
+
+    // Constructor
+    FUNCTION initialize
+        INITIALIZE clues with predefined list
+        SET clueIndex to 0
+        CREATE timer to trigger every 3000 milliseconds
+        START timer
+    END FUNCTION
+
+    // Handle timer event
+    FUNCTION onTimerTick(event)
+        IF clueIndex is less than size of clues
+            PLAY beep sound
+            PRINT current clue with timestamp
+            INCREMENT clueIndex
+        ELSE
+            STOP timer
+            CALL endHunt
+        END IF
+    END FUNCTION
+
+    // Handle end of hunt
+    FUNCTION endHunt
+        SHOW dialog asking "Abandon the treasure, matey? ⚓️" with Yes/No options
+        IF user selects Yes
+            PRINT "The hunt ends here. No treasure for ye, landlubber!"
+        ELSE
+            PRINT "Arrr! The hunt continues across the seven seas!"
+            SET clueIndex to 0
+            START timer
+        END IF
+    END FUNCTION
+END CLASS
+
+// Class: PirateTreasureHuntApp
+DEFINE PirateTreasureHuntApp
+FUNCTION main
+RUN on UI thread:
+CREATE new TreasureFinder instance
+END RUN
+END FUNCTION
+END CLASS
+
+Description
+This pseudocode represents a pirate-themed treasure hunt application.
+The TreasureFinder class manages a list of clues displayed sequentially every 3 seconds via a timer.
+ When all clues are shown, a dialog prompts the user to either abandon the hunt or continue,
+ resetting the clue sequence. The PirateTreasureHuntApp class initiates the application on the UI thread.
