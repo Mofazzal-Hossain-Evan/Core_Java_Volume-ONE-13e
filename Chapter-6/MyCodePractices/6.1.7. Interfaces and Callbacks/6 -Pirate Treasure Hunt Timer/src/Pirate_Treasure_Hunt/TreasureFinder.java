@@ -45,7 +45,7 @@ public class TreasureFinder implements ActionListener {
                 null,
                 "Abandon the treasure, matey? ⚓️",
                 "End of the Hunt",
-                JOptionPane.YES_NO_OPTION
+                JOptionPane.YES_NO_CANCEL_OPTION
         );
 
         if (choice == JOptionPane.YES_OPTION) {
