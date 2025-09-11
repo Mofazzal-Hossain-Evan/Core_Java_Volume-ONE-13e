@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/2. User Management System with Role-Based Sorting/2. User Management System with Role-Based Sorting.iml" filepath="$PROJECT_DIR$/2. User Management System with Role-Based Sorting/2. User Management System with Role-Based Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/3. Task List Organizer/3. Task List Organizer.iml" filepath="$PROJECT_DIR$/3. Task List Organizer/3. Task List Organizer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/6.1.8. The Comparator Interface.iml" filepath="$PROJECT_DIR$/.idea/6.1.8. The Comparator Interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inventory REST API Simulator/Inventory REST API Simulator.iml" filepath="$PROJECT_DIR$/Inventory REST API Simulator/Inventory REST API Simulator.iml" />
     </modules>
   </component>
 </project>
