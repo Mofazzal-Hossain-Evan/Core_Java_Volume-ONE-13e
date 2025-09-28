@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1. Student Sorter App_CHATGPT/1. Student Sorter App_CHATGPT.iml" filepath="$PROJECT_DIR$/1. Student Sorter App_CHATGPT/1. Student Sorter App_CHATGPT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2. Mini To-Do List with Filtering/2. Mini To-Do List with Filtering.iml" filepath="$PROJECT_DIR$/2. Mini To-Do List with Filtering/2. Mini To-Do List with Filtering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2. Task Scheduler with Priority Sorting/2. Task Scheduler with Priority Sorting.iml" filepath="$PROJECT_DIR$/2. Task Scheduler with Priority Sorting/2. Task Scheduler with Priority Sorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. Event Reminder/3. Event Reminder.iml" filepath="$PROJECT_DIR$/3. Event Reminder/3. Event Reminder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4. Custom Calculator/4. Custom Calculator.iml" filepath="$PROJECT_DIR$/4. Custom Calculator/4. Custom Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5. Name Transformer/5. Name Transformer.iml" filepath="$PROJECT_DIR$/5. Name Transformer/5. Name Transformer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1. Cosmic Playlist Sorter/6. Word Counter with Streams.iml" filepath="$PROJECT_DIR$/1. Cosmic Playlist Sorter/6. Word Counter with Streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/6.2. Lambda Expressions-6.2.1-6.2.2.iml" filepath="$PROJECT_DIR$/.idea/6.2. Lambda Expressions-6.2.1-6.2.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/7. Mini Employee Filter/7. Mini Employee Filter.iml" filepath="$PROJECT_DIR$/7. Mini Employee Filter/7. Mini Employee Filter.iml" />
+    </modules>
+  </component>
+</project>
