@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/6.2.3. Functional Interfaces.iml" filepath="$PROJECT_DIR$/.idea/6.2.3. Functional Interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Galactic Leaderboard Sorter/Galactic Leaderboard Sorter.iml" filepath="$PROJECT_DIR$/Galactic Leaderboard Sorter/Galactic Leaderboard Sorter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Social Feed Poster/Social Feed Poster.iml" filepath="$PROJECT_DIR$/Social Feed Poster/Social Feed Poster.iml" />
+    </modules>
+  </component>
+</project>
