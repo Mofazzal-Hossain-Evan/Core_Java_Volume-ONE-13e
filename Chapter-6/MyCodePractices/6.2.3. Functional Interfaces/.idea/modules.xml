@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/6.2.3. Functional Interfaces.iml" filepath="$PROJECT_DIR$/.idea/6.2.3. Functional Interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/Galactic Leaderboard Sorter/Galactic Leaderboard Sorter.iml" filepath="$PROJECT_DIR$/Galactic Leaderboard Sorter/Galactic Leaderboard Sorter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Game Event Handler/Game Event Handler.iml" filepath="$PROJECT_DIR$/Game Event Handler/Game Event Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inventory Stock Checker/Inventory Stock Checker.iml" filepath="$PROJECT_DIR$/Inventory Stock Checker/Inventory Stock Checker.iml" />
       <module fileurl="file://$PROJECT_DIR$/Social Feed Poster/Social Feed Poster.iml" filepath="$PROJECT_DIR$/Social Feed Poster/Social Feed Poster.iml" />
     </modules>
