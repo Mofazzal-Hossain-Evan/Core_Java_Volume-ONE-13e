@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/Galactic Leaderboard Sorter/Galactic Leaderboard Sorter.iml" filepath="$PROJECT_DIR$/Galactic Leaderboard Sorter/Galactic Leaderboard Sorter.iml" />
       <module fileurl="file://$PROJECT_DIR$/Game Event Handler/Game Event Handler.iml" filepath="$PROJECT_DIR$/Game Event Handler/Game Event Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Inventory Stock Checker/Inventory Stock Checker.iml" filepath="$PROJECT_DIR$/Inventory Stock Checker/Inventory Stock Checker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mission Status Updater/Mission Status Updater.iml" filepath="$PROJECT_DIR$/Mission Status Updater/Mission Status Updater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Product Review Sorter/Product Review Sorter.iml" filepath="$PROJECT_DIR$/Product Review Sorter/Product Review Sorter.iml" />
       <module fileurl="file://$PROJECT_DIR$/Social Feed Poster/Social Feed Poster.iml" filepath="$PROJECT_DIR$/Social Feed Poster/Social Feed Poster.iml" />
     </modules>
   </component>
