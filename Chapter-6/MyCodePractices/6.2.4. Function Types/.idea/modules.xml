@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/6.2.4. Function Types.iml" filepath="$PROJECT_DIR$/.idea/6.2.4. Function Types.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dice Roller Game Simulator/Dice Roller Game Simulator.iml" filepath="$PROJECT_DIR$/Dice Roller Game Simulator/Dice Roller Game Simulator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Inventory Price Calculator/Inventory Price Calculator.iml" filepath="$PROJECT_DIR$/Inventory Price Calculator/Inventory Price Calculator.iml" />
     </modules>
   </component>
 </project>
