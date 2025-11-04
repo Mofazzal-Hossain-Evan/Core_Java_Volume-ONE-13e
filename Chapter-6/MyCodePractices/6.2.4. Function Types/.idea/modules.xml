@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Inventory Price Calculator/Inventory Price Calculator.iml" filepath="$PROJECT_DIR$/Inventory Price Calculator/Inventory Price Calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Scoreboard Generator/Scoreboard Generator.iml" filepath="$PROJECT_DIR$/Scoreboard Generator/Scoreboard Generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Task Priority Assigner/Task Priority Assigner.iml" filepath="$PROJECT_DIR$/Task Priority Assigner/Task Priority Assigner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User Profile Matcher/User Profile Matcher.iml" filepath="$PROJECT_DIR$/User Profile Matcher/User Profile Matcher.iml" />
     </modules>
   </component>
 </project>
