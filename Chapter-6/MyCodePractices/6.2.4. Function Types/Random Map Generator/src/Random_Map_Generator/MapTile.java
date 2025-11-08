@@ -20,4 +20,12 @@ public class MapTile {
     public String toString() {
         return "[" + type + " | Value: " + value + "]";
     }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 }
