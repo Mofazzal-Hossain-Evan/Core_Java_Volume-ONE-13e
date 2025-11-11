@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/6.2.5. Method References.iml" filepath="$PROJECT_DIR$/6.2.5. Method References.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project 2 Case-Insensitive Sorter/Project 2 Case-Insensitive Sorter.iml" filepath="$PROJECT_DIR$/Project 2 Case-Insensitive Sorter/Project 2 Case-Insensitive Sorter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project 3 Math Operation Console/Project 3 Math Operation Console.iml" filepath="$PROJECT_DIR$/Project 3 Math Operation Console/Project 3 Math Operation Console.iml" />
     </modules>
   </component>
 </project>
