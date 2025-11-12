@@ -1,0 +1,9 @@
+lambda_lab/
+ ├── ComparatorDemo.java            → Arrays.sort এবং Comparator example
+ ├── TimerDemo.java                 → ActionListener compatible lambda
+ ├── PredicateDemo.java             → Predicate & removeIf example
+ ├── SupplierDemo.java              → Supplier & lazy evaluation
+ ├── FunctionTypeDemo.java          → BiFunction & Function ব্যবহার
+ ├── IntFunctionDemo.java           → IntUnaryOperator, IntFunction, ToIntFunction
+ ├── AmbiguityDemo.java             → Overloading ambiguity (IntUnaryOperator vs IntFunction)
+ └── Main.java                      → সব demo একত্রে চালানোর জন্য
