@@ -16,6 +16,14 @@ public class Superhero {
     public String getName() { return name; }
     public int getPowerLevel() { return powerLevel; }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPowerLevel(int powerLevel) {
+        this.powerLevel = powerLevel;
+    }
+
     @Override
     public String toString() {
         return name + " (Power: " + powerLevel + ")";
