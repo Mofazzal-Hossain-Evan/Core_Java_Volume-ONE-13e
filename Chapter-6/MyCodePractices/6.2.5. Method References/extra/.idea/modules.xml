@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AtomicReference/AtomicReference.iml" filepath="$PROJECT_DIR$/AtomicReference/AtomicReference.iml" />
       <module fileurl="file://$PROJECT_DIR$/Class example/Class example.iml" filepath="$PROJECT_DIR$/Class example/Class example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Setter or Update Method/Setter or Update Method.iml" filepath="$PROJECT_DIR$/Setter or Update Method/Setter or Update Method.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/extra.iml" filepath="$PROJECT_DIR$/.idea/extra.iml" />
       <module fileurl="file://$PROJECT_DIR$/wrapper class/wrapper class.iml" filepath="$PROJECT_DIR$/wrapper class/wrapper class.iml" />
     </modules>
