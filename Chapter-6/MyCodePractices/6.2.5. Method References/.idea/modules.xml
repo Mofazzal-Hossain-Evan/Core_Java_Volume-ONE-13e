@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/6.2.5. Method References.iml" filepath="$PROJECT_DIR$/6.2.5. Method References.iml" />
+      <module fileurl="file://$PROJECT_DIR$/extra/Class example/Class example.iml" filepath="$PROJECT_DIR$/extra/Class example/Class example.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project 2 Case-Insensitive Sorter/Project 2 Case-Insensitive Sorter.iml" filepath="$PROJECT_DIR$/Project 2 Case-Insensitive Sorter/Project 2 Case-Insensitive Sorter.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project 3 Math Operation Console/Project 3 Math Operation Console.iml" filepath="$PROJECT_DIR$/Project 3 Math Operation Console/Project 3 Math Operation Console.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project 4 Null Cleaner List/Project 4 Null Cleaner List.iml" filepath="$PROJECT_DIR$/Project 4 Null Cleaner List/Project 4 Null Cleaner List.iml" />
@@ -10,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/Superhero Sorter App/Superhero Sorter App.iml" filepath="$PROJECT_DIR$/Superhero Sorter App/Superhero Sorter App.iml" />
       <module fileurl="file://$PROJECT_DIR$/User Profile Comparator/User Profile Comparator.iml" filepath="$PROJECT_DIR$/User Profile Comparator/User Profile Comparator.iml" />
       <module fileurl="file://$PROJECT_DIR$/task reminder app/task reminder app.iml" filepath="$PROJECT_DIR$/task reminder app/task reminder app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/extra/wrapper class/wrapper class.iml" filepath="$PROJECT_DIR$/extra/wrapper class/wrapper class.iml" />
     </modules>
   </component>
 </project>
