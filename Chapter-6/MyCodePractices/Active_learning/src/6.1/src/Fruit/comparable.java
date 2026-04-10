@@ -1,5 +1,4 @@
-package interface_6_1;
-import java.lang.Comparable;
+package Fruit;
 
 public interface comparable<T> {
     int comparableTo(T other);

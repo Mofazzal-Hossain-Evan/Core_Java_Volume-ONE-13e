@@ -1,4 +1,4 @@
-package interface_6_1;
+package Fruit;
 
 
 import java.util.Arrays;
