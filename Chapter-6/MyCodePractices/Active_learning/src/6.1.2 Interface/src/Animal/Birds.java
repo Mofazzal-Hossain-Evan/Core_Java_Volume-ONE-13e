@@ -1,27 +1,31 @@
 package Animal;
 
-public class Birds implements Flyable{
+public class Birds {
 
-    String name;
-    int age;
-    String color;
-    boolean sound;
-    boolean isflayable;
-    public Birds(String name, int age, String color, boolean sound, boolean isflayable){
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.sound = sound;
-        this.isflayable = isflayable;
+    public static void main(String[] args) {
+        FlyingBirdsStore flyingStore = new FlyingBirdsStore();
+        NonFlyingBirdsStore nonFlyingStore = new NonFlyingBirdsStore();
+
+        Flying_Birds[] flyingBirds = flyingStore.getFB();
+        Non_Flying_Birds[] nonFlyingBirds = nonFlyingStore.getNFB();
+
+        System.out.println("=== Flying Birds ===");
+        for (Flying_Birds bird : flyingBirds) {
+            System.out.println(bird.getName() + " | " +
+                    bird.getAge() + " | " +
+                    bird.getColor() + " | " +
+                    bird.getSound()
+            );
+        }
+
+        System.out.println("\n=== Non-Flying Birds ===");
+        for (Non_Flying_Birds bird : nonFlyingBirds) {
+            System.out.println(
+                    bird.getName() + " | " +
+                            bird.getAge() + " | " +
+                            bird.getColor() + " | " +
+                            bird.getSound()
+            );
+        }
     }
-
-Flyable fly;
-
-
-    @Override
-    public boolean Flyable(boolean bird) {
-        return false;
-    }
-
-
 }
