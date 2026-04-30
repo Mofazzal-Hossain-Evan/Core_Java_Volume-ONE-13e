@@ -1,6 +1,17 @@
 package Animal;
 
-public class Flying_Birds {
+public class Flying_Birds implements Comparable<Flying_Birds>{
+
+
+
+    @Override
+    public int compareTo(Flying_Birds o) {
+        return Integer.compare(this.age, o.age);
+    }
+
+
+
+
 
     String name;
     int age;

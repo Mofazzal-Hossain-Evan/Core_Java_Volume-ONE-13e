@@ -2,6 +2,7 @@ package Animal;
 
 public interface Flyable {
 
-   boolean Flyable(boolean bird);
+  void fly(double height);
+  double MAX_ALTITUDE = 800;
 
 }
