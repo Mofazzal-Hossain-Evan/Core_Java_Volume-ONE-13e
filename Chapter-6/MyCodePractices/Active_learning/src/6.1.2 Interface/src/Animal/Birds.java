@@ -62,6 +62,33 @@ public class Birds {
 //            System.out.println("Penguin can not fly");
 //        }
 
+//Interface Polymorphism
+        System.out.println("\n=== Interface Polymorphism ===");
+        Flyable f1 = new Sparrow();
+        Flyable Crow = new Flying_Birds("Crow", 3, "Black", "Caw", true);
+        f1.fly(200);
+        Crow.fly(150);
+
+        // Mixed Object System
+        System.out.println("\n=== Mixed Object System ===");
+        Object[] zoo = {
+                new Sparrow(),
+                new Penguin(),
+                new Flying_Birds("Parrot", 2, "Green", "Squawk", true),
+                "Hello",
+                42
+        };
+        //✔ process loop
+        for (Object item : zoo) {
+            if (item instanceof Flyable f){
+                f.fly(100);
+            } else if(item instanceof Comparable c){
+                System.out.println("Comparable detected: " + item.getClass().getSimpleName());
+            } else {
+                System.out.println("Unknown item: " + item);
+            }
+        }
+
         // =========================
         // Interface hierarchy check and Behavior test
         // =========================
@@ -115,6 +142,11 @@ public class Birds {
         if (parrot instanceof Comparable) {
             System.out.println("Parrot is Comparable ✔");
         }
+
+        System.out.println("\n=== Sound Test ===");
+        Flying_Birds fb = new Flying_Birds("Crow", 4, "Black", "Caw", true);
+        System.out.println();
+        System.out.println(fb.makeSound());
     }
 
     // =========================

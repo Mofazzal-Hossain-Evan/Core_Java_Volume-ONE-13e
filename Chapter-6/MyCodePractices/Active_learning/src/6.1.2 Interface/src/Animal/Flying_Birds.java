@@ -1,6 +1,6 @@
 package Animal;
 
-public class Flying_Birds implements Comparable<Flying_Birds>{
+public class Flying_Birds implements Comparable<Flying_Birds>, Flyable, Soundable{
 
 
 
@@ -25,6 +25,15 @@ public class Flying_Birds implements Comparable<Flying_Birds>{
         this.color = color;
         this.sound = sound;
         this.isFlyable = isFlyable;
+    }
+    @Override
+    public String makeSound() {
+        return sound;
+    }
+
+    @Override
+    public void fly(double height){
+        System.out.println(name + " flying at " + height);
     }
 
     public String getName() { return name; }
