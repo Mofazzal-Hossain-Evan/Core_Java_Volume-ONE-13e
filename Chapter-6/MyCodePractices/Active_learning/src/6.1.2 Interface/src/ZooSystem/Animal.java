@@ -2,21 +2,23 @@ package ZooSystem;
 
 public abstract class Animal implements Flyable , Swimmable, Runnerable{
 
-    String name;
-    int age ;
+    int name;
+    int age;
     double weight;
+    String habit;
 
-    public Animal(String name, int age, double weight) {
+    public Animal() {
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.habit = habit;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
 
@@ -36,15 +38,16 @@ public abstract class Animal implements Flyable , Swimmable, Runnerable{
         this.weight = weight;
     }
 
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", weight=" + weight +
-                '}';
+    public String getHabit() {
+        return habit;
     }
 
-     abstract void getAnimalType();
+    public void setHabit(String habit) {
+        this.habit = habit;
+    }
+
+
+   abstract void getAnimalType();
 
 }
+

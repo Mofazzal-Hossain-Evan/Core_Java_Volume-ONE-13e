@@ -1,12 +1,12 @@
 package ZooSystem;
 
-public  class Eagle extends Animal
-        implements Flyable, Comparable {
+public  class Cheetah extends Animal implements
+        Runnerable, Comparable<Cheetah> {
 
-    public Eagle() {
+    public Cheetah() {
     }
 
-    public Eagle(String name, int age, double weight, String habitat) {
+    public Cheetah(String name, int age, double weight, String habitat) {
     }
 
     @Override
@@ -16,8 +16,7 @@ public  class Eagle extends Animal
 
     @Override
     public int fly(int alt) {
-
-        return alt;
+        return 0;
     }
 
     @Override
@@ -46,7 +45,7 @@ public  class Eagle extends Animal
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Cheetah o) {
         return 0;
     }
 

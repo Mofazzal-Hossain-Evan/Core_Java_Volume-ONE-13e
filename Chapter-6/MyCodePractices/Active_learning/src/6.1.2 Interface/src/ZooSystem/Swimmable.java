@@ -1,6 +1,6 @@
 package ZooSystem;
 
 public interface Swimmable extends Livable{
-    int swim(int depth);
+    void swim(double depth);
     int MAX_Depth = 500;
 }

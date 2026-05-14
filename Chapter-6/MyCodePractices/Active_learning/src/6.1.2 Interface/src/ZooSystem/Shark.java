@@ -1,8 +1,11 @@
 package ZooSystem;
 
-public final class Shark extends Animal{
-    public Shark(String name, int age, double weight) {
-        super(name, age, weight);
+public  class Shark extends Animal
+implements Swimmable, Comparable<Shark>{
+    public Shark() {
+    }
+
+    public Shark(String name, int age, double weight, String habitat) {
     }
 
     @Override
@@ -10,24 +13,25 @@ public final class Shark extends Animal{
 
     }
 
+
     @Override
-    public int fly(int altitude) {
-        return 0;
+    public int fly(int alt) {
+        return alt;
     }
 
     @Override
-    public int swim(int depth) {
-        return 0;
+    public void swim(double depth) {
+
     }
 
     @Override
-    public boolean eat() {
-        return false;
+    public void eat(String food, double kg) {
+
     }
 
     @Override
-    public boolean sleep() {
-        return false;
+    public void sleep(int sleep) {
+
     }
 
     @Override
@@ -36,7 +40,12 @@ public final class Shark extends Animal{
     }
 
     @Override
-    public int run(int speed) {
+    public void run(double speed) {
+
+    }
+
+    @Override
+    public int compareTo(Shark o) {
         return 0;
     }
 

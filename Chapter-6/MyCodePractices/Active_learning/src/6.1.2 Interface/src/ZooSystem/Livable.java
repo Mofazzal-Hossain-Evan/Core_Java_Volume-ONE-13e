@@ -1,6 +1,6 @@
 package ZooSystem;
 
 public non-sealed interface Livable extends AnimalBehavior {
-    boolean eat();
-    boolean sleep();
+    void  eat(String food, double kg);
+    void  sleep(int sleep);
 }
