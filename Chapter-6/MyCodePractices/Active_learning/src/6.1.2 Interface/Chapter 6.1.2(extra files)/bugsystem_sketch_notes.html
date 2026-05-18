@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐛 BugSystem — Sketch Notes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&display=swap');
+
+:root {
+  --paper: #fdf6e3;
+  --ink: #2c1810;
+  --ink2: #4a3728;
+  --red: #c0392b;
+  --blue: #1a5276;
+  --green: #1e8449;
+  --orange: #d35400;
+  --purple: #6c3483;
+  --pencil: #7f8c8d;
+  --highlight: #f9e79f;
+  --highlight2: #d5f5e3;
+  --highlight3: #d6eaf8;
+  --line: #bdc3c7;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #e8e0d0;
+  font-family: 'Caveat', cursive;
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      #c8bfb0 27px,
+      #c8bfb0 28px
+    );
+}
+
+h1.title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--ink);
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--pencil);
+  margin-bottom: 2.5rem;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.notebook {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Individual sketch card */
+.sketch-card {
+  background: var(--paper);
+  border-radius: 4px;
+  padding: 1.8rem 2rem 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  box-shadow: 
+    3px 3px 0 #c8bfb0,
+    6px 6px 0 #b8af9f,
+    0 0 0 1px #d0c8b8;
+  opacity: 0;
+  transform: translateY(30px) rotate(-0.3deg);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sketch-card:nth-child(even) {
+  transform: translateY(30px) rotate(0.3deg);
+}
+
+.sketch-card.visible {
+  opacity: 1;
+  transform: translateY(0) rotate(-0.3deg);
+}
+
+.sketch-card:nth-child(even).visible {
+  transform: translateY(0) rotate(0.3deg);
+}
+
+/* Red margin line */
+.sketch-card::before {
+  content: '';
+  position: absolute;
+  left: 52px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(192, 57, 43, 0.3);
+  border-radius: 1px;
+}
+
+/* Hole punches */
+.sketch-card::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e8e0d0;
+  border: 2px solid #c8bfb0;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 0.75rem;
+  color: var(--pencil);
+  font-family: 'Patrick Hand', cursive;
+  writing-mode: vertical-rl;
+  opacity: 0.5;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+  padding-left: 20px;
+}
+
+.card-num-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2.5px solid currentColor;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.card-title small {
+  font-size: 0.9rem;
+  color: var(--pencil);
+  font-weight: 400;
+  display: block;
+}
+
+/* SVG sketches */
+.sketch-area {
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+svg.sketch {
+  width: 100%;
+  overflow: visible;
+  filter: drop-shadow(1px 1px 0 rgba(0,0,0,0.05));
+}
+
+/* Code snippets */
+.code-line {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 0.95rem;
+  background: var(--highlight);
+  padding: 6px 12px;
+  border-radius: 4px;
+  border-left: 3px solid var(--orange);
+  margin: 6px 0 6px 20px;
+  color: var(--ink);
+  display: inline-block;
+}
+
+.code-line.blue { border-color: var(--blue); background: var(--highlight3); }
+.code-line.green { border-color: var(--green); background: var(--highlight2); }
+.code-line.red { border-color: var(--red); }
+.code-line.purple { border-color: var(--purple); background: #f5eef8; }
+
+/* Bangla explanation */
+.explain {
+  font-size: 1.05rem;
+  color: var(--ink2);
+  line-height: 1.7;
+  padding-left: 20px;
+  margin-top: 0.5rem;
+}
+
+.explain .hl { 
+  background: var(--highlight);
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Animated elements */
+@keyframes draw-in {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes walk {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(180px); }
+}
+
+@keyframes fly-path {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(60px,-30px) rotate(-10deg); }
+  50% { transform: translate(120px,-10px) rotate(5deg); }
+  75% { transform: translate(180px,-25px) rotate(-5deg); }
+  100% { transform: translate(240px,0) rotate(0deg); }
+}
+
+@keyframes wobble {
+  0%,100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes blink-cursor {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes slide-right {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0) rotate(-10deg); }
+  60% { transform: scale(1.15) rotate(3deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.anim-draw path, .anim-draw line, .anim-draw polyline {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-in 1.5s ease forwards;
+}
+
+.sketch-card.visible .anim-draw path,
+.sketch-card.visible .anim-draw line,
+.sketch-card.visible .anim-draw polyline {
+  animation: draw-in 1.5s ease forwards;
+}
+
+.sketch-card.visible .bug-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+.sketch-card.visible .bug-walk {
+  animation: walk 2s linear infinite;
+}
+
+.sketch-card.visible .bug-fly {
+  animation: fly-path 3s ease-in-out infinite;
+}
+
+.sketch-card.visible .wobble-el {
+  animation: wobble 2s ease-in-out infinite;
+}
+
+/* Sticky tape effect */
+.tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 22px;
+  background: rgba(255,220,100,0.6);
+  border: 1px solid rgba(200,170,50,0.4);
+  border-radius: 2px;
+}
+
+/* Arrow annotations */
+.annotation {
+  font-family: 'Caveat', cursive;
+  font-size: 0.85rem;
+  fill: var(--red);
+}
+
+.handline {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.handline-red { stroke: var(--red); }
+.handline-blue { stroke: var(--blue); }
+.handline-green { stroke: var(--green); }
+.handline-orange { stroke: var(--orange); }
+
+.fillbox { fill: var(--highlight); stroke: var(--orange); stroke-width: 1.5; }
+.fillbox-blue { fill: var(--highlight3); stroke: var(--blue); stroke-width: 1.5; }
+.fillbox-green { fill: var(--highlight2); stroke: var(--green); stroke-width: 1.5; }
+
+.txt-ink { fill: var(--ink); font-family: 'Caveat', cursive; }
+.txt-red { fill: var(--red); font-family: 'Caveat', cursive; }
+.txt-blue { fill: var(--blue); font-family: 'Caveat', cursive; }
+.txt-green { fill: var(--green); font-family: 'Caveat', cursive; }
+.txt-pencil { fill: var(--pencil); font-family: 'Patrick Hand', cursive; }
+
+/* Divider */
+.ruled-line {
+  border: none;
+  border-top: 1.5px solid var(--line);
+  margin: 1rem 20px;
+}
+
+/* Color coding for badges */
+.c1 { color: var(--blue); }
+.c2 { color: var(--green); }
+.c3 { color: var(--orange); }
+.c4 { color: var(--red); }
+.c5 { color: var(--purple); }
+</style>
+</head>
+<body>
+
+<div class="notebook">
+  <h1 class="title">🐛 BugSystem.java — main()</h1>
+  <p class="subtitle">Feynman Sketch Notes • হাতে আঁকা বোঝার মতো • Chapter 6.1.2</p>
+
+  <!-- ===================== CARD 1 ===================== -->
+  <div class="sketch-card">
+    <div class="tape"></div>
+    <div class="card-header">
+      <div class="card-num-badge c1">1</div>
+      <div class="card-title">Interface Variable
+        <small>new করা যায় না — কিন্তু variable বানানো যায়</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 160" height="160">
+        <!-- Form box -->
+        <rect x="10" y="20" width="200" height="110" rx="6" class="fillbox" />
+        <text x="110" y="45" text-anchor="middle" font-size="13" class="txt-blue" font-weight="700">চাকরির ফর্ম</text>
+        <text x="30" y="70" font-size="12" class="txt-pencil">প্রার্থীর নাম:</text>
+        <rect x="30" y="78" width="160" height="26" rx="3" fill="white" stroke="#bdc3c7" stroke-width="1.5"/>
+        <text x="40" y="97" font-size="14" class="txt-ink" font-weight="600">Bumble 🐝</text>
+        <text x="30" y="120" font-size="11" class="txt-pencil">→ ফর্মটাই চেয়ারে বসানো?</text>
+
+        <!-- Cross arrow -->
+        <text x="230" y="85" font-size="30" fill="#c0392b">✗</text>
+        <text x="220" y="110" font-size="10" class="txt-red">new Livable()</text>
+
+        <!-- Equals sign -->
+        <text x="285" y="92" font-size="28" class="txt-ink">=</text>
+
+        <!-- Variable box -->
+        <rect x="320" y="30" width="120" height="45" rx="5" class="fillbox-blue"/>
+        <text x="380" y="50" text-anchor="middle" font-size="11" class="txt-blue" font-weight="700">Livable l</text>
+        <text x="380" y="68" text-anchor="middle" font-size="11" class="txt-pencil">ফর্মের ঘর</text>
+
+        <!-- Arrow down -->
+        <line x1="380" y1="78" x2="380" y2="95" class="handline-blue" stroke-width="2" marker-end="url(#arr)"/>
+
+        <!-- Bee object -->
+        <rect x="320" y="98" width="120" height="45" rx="5" class="fillbox-green"/>
+        <text x="380" y="118" text-anchor="middle" font-size="14" class="txt-green" font-weight="700">🐝 new Bee()</text>
+        <text x="380" y="136" text-anchor="middle" font-size="11" class="txt-pencil">যে বসলো</text>
+
+        <!-- Checkmark -->
+        <text x="460" y="85" font-size="28" fill="#1e8449">✓</text>
+
+        <!-- Annotation -->
+        <text x="500" y="55" font-size="13" class="txt-ink">l.eat("Honey")</text>
+        <text x="500" y="75" font-size="13" class="txt-ink">l.sleep(8)</text>
+        <text x="500" y="100" font-size="11" class="txt-pencil">Bee জানে এগুলো,</text>
+        <text x="500" y="118" font-size="11" class="txt-pencil">তাই কাজ করে ✔</text>
+
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#1a5276"/>
+          </marker>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="code-line blue">Livable l = new Bee("Bumble", 1, 0.1, "Garden");</div>
+    <div class="explain">
+      <span class="hl">Livable</span> হলো ফর্মের ঘর — খালি জায়গা।
+      <span class="hl">new Bee()</span> হলো যে সেই ঘরে বসলো।
+      ফর্মকে নিজেই চেয়ারে বসাতে পারবে না।
+    </div>
+  </div>
+
+  <!-- ===================== CARD 2 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c2">2</div>
+      <div class="card-title">instanceof check
+        <small>Airport security — wings আছে কিনা চেক করো</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 180" height="180">
+
+        <!-- Bugs coming in -->
+        <text x="10" y="40" font-size="11" class="txt-pencil">বাগের লাইন →</text>
+
+        <!-- Gate -->
+        <rect x="200" y="15" width="90" height="150" rx="4" fill="#fdf6e3" stroke="#2c1810" stroke-width="2"/>
+        <text x="245" y="40" text-anchor="middle" font-size="11" class="txt-blue" font-weight="700">instanceof</text>
+        <text x="245" y="57" text-anchor="middle" font-size="11" class="txt-blue">Flyable?</text>
+        <!-- Gate door -->
+        <rect x="215" y="65" width="60" height="90" rx="3" fill="white" stroke="#7f8c8d" stroke-width="1.5"/>
+        <circle cx="268" cy="110" r="4" fill="#7f8c8d"/>
+        <text x="245" y="160" text-anchor="middle" font-size="10" class="txt-pencil">Security Gate</text>
+
+        <!-- Bugs -->
+        <text x="50" y="82" font-size="22" class="bug-float">🦋</text>
+        <text x="50" y="112" font-size="22">🐜</text>
+        <text x="50" y="142" font-size="22">🐝</text>
+        <text x="50" y="172" font-size="22">🪲</text>
+
+        <!-- Arrows from bugs to gate -->
+        <line x1="90" y1="78" x2="195" y2="95" class="handline-green" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <line x1="90" y1="108" x2="195" y2="108" class="handline-red" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <line x1="90" y1="138" x2="195" y2="108" class="handline-green" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <line x1="90" y1="168" x2="195" y2="120" class="handline-red" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+        <!-- Output right side -->
+        <rect x="310" y="25" width="160" height="40" rx="5" class="fillbox-green"/>
+        <text x="390" y="42" text-anchor="middle" font-size="13" class="txt-green" font-weight="700">🦋 fly() ✔</text>
+        <text x="390" y="58" text-anchor="middle" font-size="11" class="txt-pencil">হ্যাঁ → ভেতরে যাও</text>
+
+        <rect x="310" y="80" width="160" height="40" rx="5" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="390" y="97" text-anchor="middle" font-size="13" class="txt-red" font-weight="700">🐜 skip ✘</text>
+        <text x="390" y="113" text-anchor="middle" font-size="11" class="txt-pencil">না → বাইরে থাকো</text>
+
+        <rect x="310" y="130" width="160" height="40" rx="5" class="fillbox-green"/>
+        <text x="390" y="147" text-anchor="middle" font-size="13" class="txt-green" font-weight="700">🐝 fly() ✔</text>
+        <text x="390" y="163" text-anchor="middle" font-size="11" class="txt-pencil">হ্যাঁ → ভেতরে যাও</text>
+
+        <!-- Right arrows -->
+        <line x1="295" y1="90" x2="308" y2="90" class="handline" stroke-width="1.5"/>
+        <line x1="295" y1="100" x2="308" y2="100" class="handline" stroke-width="1.5"/>
+        <line x1="295" y1="110" x2="308" y2="150" class="handline" stroke-width="1.5"/>
+      </svg>
+    </div>
+
+    <div class="code-line green">if (b instanceof Flyable) { b.fly(); }</div>
+    <div class="explain">
+      প্রতিটা bug কে জিজ্ঞেস করো — <span class="hl">Flyable আছো?</span>
+      হ্যাঁ বললে fly() call করো। না বললে skip।
+    </div>
+  </div>
+
+  <!-- ===================== CARD 3 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c3">3</div>
+      <div class="card-title">Polymorphism
+        <small>একই variable — আলাদা আলাদা object</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 160" height="160">
+
+        <!-- Container box -->
+        <rect x="10" y="20" width="160" height="120" rx="6" class="fillbox-blue"/>
+        <text x="90" y="42" text-anchor="middle" font-size="14" class="txt-blue" font-weight="700">Flyable f</text>
+        <text x="90" y="60" text-anchor="middle" font-size="11" class="txt-pencil">একটাই variable</text>
+
+        <!-- Monday -->
+        <rect x="20" y="68" width="140" height="30" rx="4" class="fillbox-green"/>
+        <text x="90" y="88" text-anchor="middle" font-size="13" class="txt-green">সোমবার: 🦋 Butterfly</text>
+
+        <!-- Tuesday -->
+        <rect x="20" y="103" width="140" height="30" rx="4" fill="#fff3e0" stroke="#d35400" stroke-width="1.5"/>
+        <text x="90" y="123" text-anchor="middle" font-size="13" class="txt-ink" fill="#d35400">মঙ্গলবার: 🐝 Bee</text>
+
+        <!-- Arrow -->
+        <text x="185" y="90" font-size="30" class="txt-pencil">→</text>
+
+        <!-- Behavior boxes -->
+        <rect x="220" y="30" width="200" height="45" rx="5" class="fillbox-green"/>
+        <text x="320" y="50" text-anchor="middle" font-size="13" class="txt-green" font-weight="700">f.fly(100)</text>
+        <text x="320" y="68" text-anchor="middle" font-size="11" class="txt-pencil">🦋 Butterfly উড়লো!</text>
+
+        <rect x="220" y="90" width="200" height="45" rx="5" fill="#fff3e0" stroke="#d35400" stroke-width="1.5"/>
+        <text x="320" y="110" text-anchor="middle" font-size="13" fill="#d35400" font-weight="700" font-family="Caveat, cursive">f.fly(200)</text>
+        <text x="320" y="128" text-anchor="middle" font-size="11" class="txt-pencil">🐝 Bee উড়লো!</text>
+
+        <!-- Key insight -->
+        <rect x="440" y="40" width="240" height="90" rx="6" fill="#fdf6e3" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="560" y="65" text-anchor="middle" font-size="13" class="txt-ink" font-weight="700">💡 মূল কথা</text>
+        <text x="560" y="85" text-anchor="middle" font-size="12" class="txt-ink">f কে বদলালে behavior</text>
+        <text x="560" y="103" text-anchor="middle" font-size="12" class="txt-ink">নিজে নিজে বদলায়</text>
+        <text x="560" y="120" text-anchor="middle" font-size="11" class="txt-pencil">এটাই Polymorphism!</text>
+      </svg>
+    </div>
+
+    <div class="code-line">Flyable f = new Butterfly(...);</div>
+    <div class="code-line orange">f = new Bee(...); &nbsp;// same variable, different behavior!</div>
+    <div class="explain">
+      একটাই বাক্স <span class="hl">Flyable f</span> — কিন্তু ভেতরে যে কেউ ঢুকতে পারে।
+      Butterfly ঢুকলে Butterfly এর fly(), Bee ঢুকলে Bee এর fly()।
+    </div>
+  </div>
+
+  <!-- ===================== CARD 4 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c4">4</div>
+      <div class="card-title">Constant check
+        <small>সরকারি নিয়ম — কেউ বদলাতে পারবে না</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 170" height="170">
+
+        <!-- Sky -->
+        <rect x="10" y="10" width="440" height="140" rx="8" fill="#eaf4fc" stroke="#1a5276" stroke-width="1.5"/>
+        <text x="230" y="32" text-anchor="middle" font-size="13" class="txt-blue" font-weight="700">আকাশ</text>
+
+        <!-- Ground -->
+        <rect x="10" y="130" width="440" height="20" rx="4" fill="#d5f5e3" stroke="#1e8449" stroke-width="1"/>
+
+        <!-- MAX line -->
+        <line x1="20" y1="70" x2="440" y2="70" stroke="#c0392b" stroke-width="2" stroke-dasharray="8,4"/>
+        <text x="450" y="75" font-size="12" class="txt-red" font-weight="700">MAX_ALT = 500m</text>
+        <text x="450" y="90" font-size="10" class="txt-red">public static final</text>
+        <text x="450" y="105" font-size="10" class="txt-red">কেউ বদলাতে পারবে না</text>
+
+        <!-- Safe zone label -->
+        <text x="230" y="108" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">✅ Safe Zone</text>
+
+        <!-- Danger zone label -->
+        <text x="230" y="55" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">❌ Danger Zone</text>
+
+        <!-- Bee at safe height -->
+        <text x="100" y="105" font-size="26" class="bug-float">🐝</text>
+        <text x="85" y="125" font-size="10" class="txt-green">200m ✔</text>
+
+        <!-- Butterfly too high -->
+        <text x="250" y="45" font-size="26">🦋</text>
+        <text x="235" y="62" font-size="10" class="txt-red">600m ✘</text>
+
+        <!-- Warning arrow -->
+        <line x1="270" y1="47" x2="340" y2="47" class="handline-red" stroke-width="2"/>
+        <text x="345" y="52" font-size="12" class="txt-red">Too High!</text>
+
+        <!-- Constant box -->
+        <rect x="540" y="20" width="150" height="60" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+        <text x="615" y="42" text-anchor="middle" font-size="12" class="txt-red" font-weight="700">Flyable interface</text>
+        <text x="615" y="62" text-anchor="middle" font-size="13" class="txt-ink" font-weight="700">MAX_ALT = 500</text>
+
+      </svg>
+    </div>
+
+    <div class="code-line red">if (alt > Flyable.MAX_ALT) { "Too High!" }</div>
+    <div class="explain">
+      <span class="hl">MAX_ALT = 500</span> মানে interface এ লেখা সরকারি নিয়ম।
+      Java এটাকে <span class="hl">public static final</span> বানিয়ে দেয়।
+      Bee ও বদলাতে পারবে না, Butterfly ও পারবে না।
+    </div>
+  </div>
+
+  <!-- ===================== CARD 5 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c5">5</div>
+      <div class="card-title">Multiple implements
+        <small>WaterBeetle — দুই দলের সদস্য একসাথে!</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 190" height="190">
+
+        <!-- Crawlable club -->
+        <ellipse cx="190" cy="100" rx="155" ry="75" fill="#fff3e0" stroke="#d35400" stroke-width="2"/>
+        <text x="100" y="60" font-size="13" fill="#d35400" font-weight="700">🐜 Crawlable Club</text>
+        <text x="100" y="80" font-size="12" class="txt-pencil">crawl()</text>
+        <text x="60" y="115" font-size="22">🐜</text>
+        <text x="60" y="135" font-size="10" class="txt-pencil">Ant</text>
+        <text x="100" y="165" font-size="11" class="txt-pencil">শুধু এই club এ</text>
+
+        <!-- Swimmable club -->
+        <ellipse cx="510" cy="100" rx="155" ry="75" fill="#eaf4fc" stroke="#1a5276" stroke-width="2"/>
+        <text x="430" y="60" font-size="13" fill="#1a5276" font-weight="700">🪲 Swimmable Club</text>
+        <text x="430" y="80" font-size="12" class="txt-pencil">swim()</text>
+        <text x="580" y="115" font-size="22">🐟</text>
+        <text x="580" y="135" font-size="10" class="txt-pencil">Fish</text>
+        <text x="430" y="165" font-size="11" class="txt-pencil">শুধু এই club এ</text>
+
+        <!-- WaterBeetle in middle (both clubs) -->
+        <circle cx="350" cy="100" r="42" fill="#d5f5e3" stroke="#1e8449" stroke-width="2.5"/>
+        <text x="350" y="90" text-anchor="middle" font-size="24">🪲</text>
+        <text x="350" y="115" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="700">WaterBeetle</text>
+        <text x="350" y="133" text-anchor="middle" font-size="10" class="txt-green">দুই club এ!</text>
+
+        <!-- Star badge -->
+        <text x="385" y="68" font-size="18">⭐</text>
+
+      </svg>
+    </div>
+
+    <div class="code-line green">WaterBeetle wb = new WaterBeetle(...);</div>
+    <div class="code-line green">wb.crawl(5); &nbsp;// Crawlable থেকে</div>
+    <div class="code-line blue">wb.swim(2); &nbsp;// Swimmable থেকে</div>
+    <div class="explain">
+      Ant শুধু হাঁটতে পারে। Fish শুধু সাঁতার পারে।
+      কিন্তু <span class="hl">WaterBeetle দুটোই পারে</span> — কারণ সে দুটো interface implement করে।
+      Pizza Project এ GrilledPizza এর মতো — bake + grill।
+    </div>
+  </div>
+
+  <!-- ===================== CARD 6 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c1">6</div>
+      <div class="card-title">Sealed Interface
+        <small>VIP Club — শুধু দুজন member!</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 170" height="170">
+
+        <!-- Big locked door -->
+        <rect x="10" y="20" width="200" height="135" rx="8" fill="#fdf6e3" stroke="#2c1810" stroke-width="2.5"/>
+        <text x="110" y="48" text-anchor="middle" font-size="14" class="txt-ink" font-weight="700">🔒 BugBehavior</text>
+        <text x="110" y="66" text-anchor="middle" font-size="11" class="txt-pencil">sealed interface</text>
+
+        <!-- Door -->
+        <rect x="60" y="75" width="100" height="72" rx="4" fill="#d5c5a5" stroke="#7f8c8d" stroke-width="2"/>
+        <circle cx="150" cy="111" r="6" fill="#c0a060"/>
+        <text x="110" y="100" text-anchor="middle" font-size="11" class="txt-ink">permits:</text>
+        <text x="110" y="118" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="700">Livable ✔</text>
+        <text x="110" y="136" text-anchor="middle" font-size="12" fill="#1a5276" font-weight="700">Bug ✔</text>
+
+        <!-- Permitted -->
+        <rect x="240" y="25" width="150" height="45" rx="6" class="fillbox-green"/>
+        <text x="315" y="45" text-anchor="middle" font-size="13" class="txt-green" font-weight="700">Livable ✔</text>
+        <text x="315" y="62" text-anchor="middle" font-size="11" class="txt-pencil">interface — permitted</text>
+
+        <rect x="240" y="85" width="150" height="45" rx="6" class="fillbox-blue"/>
+        <text x="315" y="105" text-anchor="middle" font-size="13" class="txt-blue" font-weight="700">Bug ✔</text>
+        <text x="315" y="122" text-anchor="middle" font-size="11" class="txt-pencil">abstract class — permitted</text>
+
+        <!-- Not permitted -->
+        <rect x="240" y="145" width="150" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+        <text x="315" y="157" text-anchor="middle" font-size="10" class="txt-red">অন্য কেউ → Compile Error! ❌</text>
+
+        <!-- Green arrows -->
+        <line x1="215" y1="110" x2="238" y2="47" class="handline-green" stroke-width="1.5"/>
+        <line x1="215" y1="120" x2="238" y2="107" class="handline-blue" stroke-width="1.5"/>
+
+        <!-- Bee using it -->
+        <rect x="430" y="35" width="240" height="110" rx="8" fill="#fdf6e3" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="550" y="60" text-anchor="middle" font-size="12" class="txt-pencil">ব্যবহার:</text>
+        <text x="550" y="82" text-anchor="middle" font-size="12" class="txt-ink" font-weight="700">BugBehavior bb =</text>
+        <text x="550" y="100" text-anchor="middle" font-size="12" class="txt-ink">new Bee(...)</text>
+        <text x="550" y="125" text-anchor="middle" font-size="11" fill="#1e8449">bb instanceof BugBehavior</text>
+        <text x="550" y="140" text-anchor="middle" font-size="13" fill="#1e8449">→ true ✔</text>
+      </svg>
+    </div>
+
+    <div class="code-line purple">BugBehavior bb = new Bee("Bumble", 1, 0.1, "Garden");</div>
+    <div class="explain">
+      <span class="hl">sealed</span> মানে বন্ধ দরজা।
+      <span class="hl">permits Livable, Bug</span> — এই দুজনের নাম লেখা।
+      বাইরের কেউ extend/implement করতে এলে Java বলবে: না!
+    </div>
+  </div>
+
+  <!-- ===================== CARD 7 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c2">7</div>
+      <div class="card-title">Comparable + Generic
+        <small>দাঁড়িপাল্লা — কে ভারী?</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 175" height="175">
+
+        <!-- Scale pole -->
+        <line x1="350" y1="30" x2="350" y2="100" stroke="#5c3d1e" stroke-width="4" stroke-linecap="round"/>
+        <line x1="200" y1="100" x2="500" y2="100" stroke="#5c3d1e" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="350" cy="28" r="8" fill="#5c3d1e"/>
+
+        <!-- Left pan (lighter) -->
+        <line x1="200" y1="100" x2="200" y2="130" stroke="#7f8c8d" stroke-width="2"/>
+        <line x1="215" y1="100" x2="215" y2="130" stroke="#7f8c8d" stroke-width="2"/>
+        <rect x="185" y="130" width="50" height="20" rx="4" fill="#fff3e0" stroke="#d35400" stroke-width="1.5"/>
+        <text x="210" y="145" text-anchor="middle" font-size="22">🐝</text>
+        <text x="210" y="168" text-anchor="middle" font-size="11" class="txt-pencil">Bee 0.1g</text>
+
+        <!-- Right pan (heavier, lower) -->
+        <line x1="485" y1="100" x2="485" y2="140" stroke="#7f8c8d" stroke-width="2"/>
+        <line x1="500" y1="100" x2="500" y2="140" stroke="#7f8c8d" stroke-width="2"/>
+        <rect x="470" y="140" width="50" height="20" rx="4" fill="#eaf4fc" stroke="#1a5276" stroke-width="1.5"/>
+        <text x="495" y="155" text-anchor="middle" font-size="22">🦋</text>
+        <text x="495" y="178" text-anchor="middle" font-size="11" class="txt-pencil">Butterfly 0.5g</text>
+
+        <!-- Tilted balance beam -->
+        <line x1="200" y1="105" x2="500" y2="95" stroke="#5c3d1e" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Result -->
+        <rect x="10" y="30" width="160" height="80" rx="6" fill="#fdf6e3" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="90" y="52" text-anchor="middle" font-size="12" class="txt-ink" font-weight="700">compareTo()</text>
+        <text x="90" y="72" text-anchor="middle" font-size="11" class="txt-pencil">&gt; 0 → a ভারী</text>
+        <text x="90" y="90" text-anchor="middle" font-size="11" class="txt-pencil">&lt; 0 → b ভারী</text>
+        <text x="90" y="108" text-anchor="middle" font-size="11" class="txt-pencil">= 0 → সমান</text>
+
+        <!-- Generic note -->
+        <rect x="555" y="30" width="135" height="75" rx="6" fill="#d5f5e3" stroke="#1e8449" stroke-width="1.5"/>
+        <text x="622" y="52" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="700">&lt;T extends</text>
+        <text x="622" y="68" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="700">Comparable&lt;T&gt;&gt;</text>
+        <text x="622" y="86" text-anchor="middle" font-size="10" class="txt-pencil">T = যেকোনো type</text>
+        <text x="622" y="100" text-anchor="middle" font-size="10" class="txt-pencil">Comparable হতে হবে</text>
+      </svg>
+    </div>
+
+    <div class="code-line green">processBug(bee1, butterfly1);</div>
+    <div class="code-line green">&lt;T extends Comparable&lt;T&gt;&gt; void processBug(T a, T b)</div>
+    <div class="explain">
+      <span class="hl">compareTo()</span> দাঁড়িপাল্লার মতো।
+      <span class="hl">&lt;T extends Comparable&lt;T&gt;&gt;</span> মানে — T যাই হোক, সে compare করতে পারে।
+      Bee দাও, Butterfly দাও — সব চলবে।
+    </div>
+  </div>
+
+  <!-- ===================== CARD 8 ===================== -->
+  <div class="sketch-card">
+    <div class="card-header">
+      <div class="card-num-badge c3">8</div>
+      <div class="card-title">Pattern Matching instanceof
+        <small>পুরনো vs নতুন — একলাইনে দেখো আর ধরো</small>
+      </div>
+    </div>
+
+    <div class="sketch-area">
+      <svg class="sketch" viewBox="0 0 700 190" height="190">
+
+        <!-- Pipe / filter -->
+        <rect x="10" y="20" width="680" height="50" rx="8" fill="#eaf4fc" stroke="#1a5276" stroke-width="2"/>
+        <text x="350" y="42" text-anchor="middle" font-size="13" class="txt-blue" font-weight="700">Object[] mixed এ আছে:</text>
+        <text x="100" y="60" font-size="22">🦋</text>
+        <text x="200" y="60" font-size="22">🐜</text>
+        <text x="300" y="60" font-size="14" class="txt-pencil">"hello"</text>
+        <text x="420" y="60" font-size="14" class="txt-pencil">42</text>
+        <text x="520" y="60" font-size="22">🪲</text>
+
+        <!-- Filter labels below -->
+        <text x="110" y="92" text-anchor="middle" font-size="11" fill="#1a5276">Flyable?</text>
+        <line x1="110" y1="75" x2="110" y2="88" class="handline-blue" stroke-width="1.5"/>
+
+        <text x="210" y="92" text-anchor="middle" font-size="11" fill="#d35400">Crawlable?</text>
+        <line x1="210" y1="75" x2="210" y2="88" class="handline-orange" stroke-width="1.5"/>
+
+        <text x="310" y="92" text-anchor="middle" font-size="11" fill="#1e8449">Comparable?</text>
+        <line x1="310" y1="75" x2="310" y2="88" class="handline-green" stroke-width="1.5"/>
+
+        <text x="430" y="92" text-anchor="middle" font-size="11" fill="#1e8449">Comparable?</text>
+        <line x1="430" y1="75" x2="430" y2="88" class="handline-green" stroke-width="1.5"/>
+
+        <text x="535" y="92" text-anchor="middle" font-size="11" fill="#6c3483">Both!</text>
+        <line x1="535" y1="75" x2="535" y2="88" stroke="#6c3483" stroke-width="1.5"/>
+
+        <!-- Old vs New comparison -->
+        <rect x="10" y="105" width="320" height="78" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="170" y="124" text-anchor="middle" font-size="12" class="txt-red" font-weight="700">❌ পুরনো style (2 লাইন)</text>
+        <text x="170" y="142" text-anchor="middle" font-size="11" class="txt-ink">if (item instanceof Flyable) {</text>
+        <text x="170" y="158" text-anchor="middle" font-size="11" class="txt-ink">  Flyable f = (Flyable) item;</text>
+        <text x="170" y="174" text-anchor="middle" font-size="11" class="txt-ink">  f.fly(100); }</text>
+
+        <rect x="345" y="105" width="340" height="78" rx="6" class="fillbox-green"/>
+        <text x="515" y="124" text-anchor="middle" font-size="12" class="txt-green" font-weight="700">✅ নতুন style (1 লাইন)</text>
+        <text x="515" y="147" text-anchor="middle" font-size="12" class="txt-ink" font-weight="700">if (item instanceof Flyable f) {</text>
+        <text x="515" y="165" text-anchor="middle" font-size="12" class="txt-ink">  f.fly(100); }</text>
+        <text x="515" y="180" text-anchor="middle" font-size="10" fill="#1e8449">দেখা + ধরা একসাথে! Java 16+</text>
+      </svg>
+    </div>
+
+    <div class="code-line">if (item instanceof Flyable f) { f.fly(100); }</div>
+    <div class="explain">
+      পুরনোতে দুটো কাজ আলাদা — আগে check করো, তারপর cast করো।
+      নতুনতে <span class="hl">instanceof Flyable f</span> — check আর capture একসাথে।
+      <span class="hl">f</span> সাথে সাথে ready, আলাদা cast দরকার নেই।
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="sketch-card" style="background: #1b2631; border: none; box-shadow: 4px 4px 0 #111;">
+    <div style="padding-left:20px;">
+      <div style="font-size:1.8rem; color:#f9e79f; margin-bottom:1rem; font-weight:700;">🧠 মাথায় রাখো — ৮টা concept</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #1a5276;">
+          <div style="color:#7fb3d3; font-size:1rem; font-weight:700;">1. Interface Variable</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">Livable l = new Bee() — ফর্মের ঘর</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #1e8449;">
+          <div style="color:#7dbb8a; font-size:1rem; font-weight:700;">2. instanceof check</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">Airport security gate</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #d35400;">
+          <div style="color:#f0a060; font-size:1rem; font-weight:700;">3. Polymorphism</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">একই variable, আলাদা behavior</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #c0392b;">
+          <div style="color:#e57373; font-size:1rem; font-weight:700;">4. Constant</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">MAX_ALT — সরকারি নিয়ম</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #6c3483;">
+          <div style="color:#b39ddb; font-size:1rem; font-weight:700;">5. Multiple implements</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">WaterBeetle — দুই club</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #f9a825;">
+          <div style="color:#f9cc5a; font-size:1rem; font-weight:700;">6. Sealed interface</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">VIP Club — শুধু দুজন</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #1e8449;">
+          <div style="color:#7dbb8a; font-size:1rem; font-weight:700;">7. Comparable + Generic</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">দাঁড়িপাল্লা — &lt;T extends Comparable&gt;</div>
+        </div>
+        <div style="background:#2c3e50; border-radius:8px; padding:10px 14px; border-left:4px solid #1a5276;">
+          <div style="color:#7fb3d3; font-size:1rem; font-weight:700;">8. Pattern Matching</div>
+          <div style="color:#bdc3c7; font-size:0.85rem;">instanceof Flyable f — দেখা+ধরা একসাথে</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Scroll-triggered reveal
+const cards = document.querySelectorAll('.sketch-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, 100);
+    }
+  });
+}, { threshold: 0.15 });
+
+cards.forEach(card => observer.observe(card));
+
+// Staggered initial load for first few cards
+cards.forEach((card, i) => {
+  if (i < 2) {
+    setTimeout(() => card.classList.add('visible'), i * 300 + 200);
+  }
+});
+</script>
+</body>
+</html>

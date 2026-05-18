@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌿 Nature Bug System — Java Interface Diagram</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --leaf: #2d5a27;
+  --leaf-light: #4a8c42;
+  --leaf-pale: #c8e6c0;
+  --soil: #5c3d1e;
+  --soil-light: #8b6340;
+  --sky: #e8f5e9;
+  --sun: #f9a825;
+  --bug1: #e53935;
+  --bug2: #f57c00;
+  --bug3: #6a1b9a;
+  --bug4: #0277bd;
+  --sealed: #1b5e20;
+  --bark: #3e2723;
+  --paper: #fafff8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--sky);
+  font-family: 'Space Mono', monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated background leaves */
+.bg-leaf {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.07;
+  font-size: 80px;
+  animation: sway 6s ease-in-out infinite;
+}
+.bg-leaf:nth-child(1) { top: 5%; left: 2%; animation-delay: 0s; }
+.bg-leaf:nth-child(2) { top: 20%; right: 3%; animation-delay: 1s; font-size: 60px; }
+.bg-leaf:nth-child(3) { bottom: 10%; left: 5%; animation-delay: 2s; font-size: 100px; }
+.bg-leaf:nth-child(4) { bottom: 30%; right: 2%; animation-delay: 3s; font-size: 70px; }
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--leaf);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 11px;
+  color: var(--soil-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bug-parade {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  animation: parade 3s ease-in-out infinite;
+}
+
+@keyframes parade {
+  0%, 100% { letter-spacing: 0.1em; }
+  50% { letter-spacing: 0.4em; }
+}
+
+/* Cards */
+.node {
+  background: var(--paper);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(45, 90, 39, 0.15);
+}
+
+.node-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.tag-sealed { background: var(--sealed); color: #fff; }
+.tag-interface { background: var(--leaf-light); color: #fff; }
+.tag-abstract { background: var(--soil-light); color: #fff; }
+.tag-concrete { background: #424242; color: #fff; }
+.tag-store { background: var(--bug4); color: #fff; }
+.tag-main { background: var(--bug3); color: #fff; }
+
+.node-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--bark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.node-methods {
+  font-size: 11px;
+  color: var(--soil-light);
+  line-height: 2;
+}
+
+.node-methods code {
+  background: var(--leaf-pale);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--leaf);
+  font-size: 11px;
+}
+
+.node-methods .const {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* Sealed box */
+.sealed-box {
+  border: 3px dashed var(--sealed);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(27, 94, 32, 0.04);
+  position: relative;
+}
+
+.sealed-label {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--sealed);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+/* Arrow */
+.arrow {
+  text-align: center;
+  font-size: 11px;
+  color: var(--leaf-light);
+  font-weight: 700;
+  margin: 4px 0;
+  letter-spacing: 0.05em;
+}
+
+.arrow-big {
+  font-size: 20px;
+  margin: 6px 0;
+  display: block;
+}
+
+/* Interface grid */
+.iface-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.iface-card {
+  background: var(--paper);
+  border: 2px solid var(--leaf-light);
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.iface-card:hover { transform: scale(1.04); }
+
+.iface-emoji { font-size: 2rem; display: block; margin-bottom: 6px; }
+
+.iface-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--leaf);
+  margin-bottom: 6px;
+}
+
+.iface-method {
+  font-size: 10px;
+  color: var(--soil-light);
+  line-height: 1.8;
+}
+
+.iface-method code {
+  background: var(--leaf-pale);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--leaf);
+  display: block;
+  margin: 1px 0;
+}
+
+.iface-const {
+  background: #fff3e0;
+  color: #e65100 !important;
+  font-weight: 700;
+}
+
+/* Concrete grid */
+.concrete-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.concrete-card {
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  border-left: 5px solid;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.concrete-card:hover { transform: translateX(4px); }
+
+.cc-1 { border-color: var(--bug1); }
+.cc-2 { border-color: var(--bug2); }
+.cc-3 { border-color: var(--bug3); }
+.cc-4 { border-color: var(--bug4); }
+
+.concrete-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.concrete-impl {
+  font-size: 10px;
+  color: var(--soil-light);
+  line-height: 1.8;
+}
+
+.impl-badge {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 700;
+  margin: 1px 2px;
+}
+
+.ib-fly { background: #e3f2fd; color: #0277bd; }
+.ib-swim { background: #e0f7fa; color: #00838f; }
+.ib-crawl { background: #f3e5f5; color: #6a1b9a; }
+.ib-dig { background: #fbe9e7; color: #bf360c; }
+.ib-comp { background: #f9fbe7; color: #558b2f; }
+.ib-final { background: #fce4ec; color: #ad1457; font-style: italic; }
+
+/* Main section */
+.main-section {
+  background: var(--paper);
+  border: 2px solid var(--bug3);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+}
+
+.main-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bug3);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.main-item {
+  font-size: 11px;
+  color: var(--soil);
+  background: var(--sky);
+  padding: 6px 10px;
+  border-radius: 8px;
+  line-height: 1.5;
+  border-left: 3px solid var(--leaf-light);
+}
+
+.main-item .num {
+  font-weight: 700;
+  color: var(--leaf);
+}
+
+/* Mapping table */
+.mapping {
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+  border: 2px solid var(--sun);
+}
+
+.mapping-title {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  color: var(--soil);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+
+.map-from {
+  background: #e3f2fd;
+  color: var(--bug4);
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  min-width: 160px;
+  text-align: center;
+}
+
+.map-arrow { color: var(--leaf-light); font-size: 14px; }
+
+.map-to {
+  background: var(--leaf-pale);
+  color: var(--leaf);
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Section title */
+.sec-title {
+  font-family: 'Caveat', cursive;
+  font-size: 1.6rem;
+  color: var(--leaf);
+  margin: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* permits note */
+.permits-note {
+  font-size: 10px;
+  background: #e8f5e9;
+  color: var(--leaf);
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+/* crawl card special */
+.special-badge {
+  background: linear-gradient(90deg, #e3f2fd, #f3e5f5);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--bark);
+  margin-left: 6px;
+}
+
+.divider {
+  border: none;
+  border-top: 2px dashed var(--leaf-pale);
+  margin: 1.5rem 0;
+}
+
+/* Bug crawling animation */
+.bug-crawl {
+  position: fixed;
+  bottom: 20px;
+  font-size: 24px;
+  animation: crawl 12s linear infinite;
+  pointer-events: none;
+  z-index: 100;
+}
+
+@keyframes crawl {
+  0% { left: -50px; transform: scaleX(1); }
+  49% { left: calc(100vw + 50px); transform: scaleX(1); }
+  50% { left: calc(100vw + 50px); transform: scaleX(-1); }
+  99% { left: -50px; transform: scaleX(-1); }
+  100% { left: -50px; transform: scaleX(1); }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-leaf">🌿</div>
+<div class="bg-leaf">🍃</div>
+<div class="bg-leaf">🌱</div>
+<div class="bg-leaf">🌾</div>
+
+<div class="bug-crawl">🐛</div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="bug-parade">🐛 🦋 🐝 🪲 🐜 🦗 🪳</div>
+    <h1>Nature Bug System</h1>
+    <p>Java Interface Chapter 6.1.2 — তোমার মাথায় আঁকা diagram</p>
+  </div>
+
+  <!-- SEALED LAYER -->
+  <div class="sec-title">🔒 Sealed Layer</div>
+
+  <div class="sealed-box">
+    <div class="sealed-label">permits → Livable, Bug (শুধু এই দুজন!)</div>
+    <div class="node" style="border: 2px solid var(--sealed);">
+      <div class="node-tag tag-sealed">sealed interface</div>
+      <div class="node-title">🌿 BugBehavior</div>
+      <div class="node-methods">
+        <code>String getHabitat()</code>
+        <br>
+        <span style="font-size:10px; color: #888;">👉 permits করা দুজন ছাড়া আর কেউ এটা extend/implement করতে পারবে না</span>
+      </div>
+      <div class="permits-note">✔ permits → Livable (interface) &nbsp;|&nbsp; Bug (abstract class)</div>
+    </div>
+  </div>
+
+  <div class="arrow">⬇ extends &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⬇ implements</div>
+
+  <!-- INTERFACE LAYER -->
+  <div class="sec-title">⚙️ Interface Layer</div>
+
+  <div class="node" style="border: 2px solid var(--leaf-light); margin-bottom: 1rem;">
+    <div class="node-tag tag-interface">non-sealed interface</div>
+    <div class="node-title">🌱 Livable <span style="font-size:11px; color:#888; font-weight:400;">extends BugBehavior</span></div>
+    <div class="node-methods">
+      <code>void eat(String food, double grams)</code>
+      <code>void sleep(int hours)</code>
+    </div>
+  </div>
+
+  <div class="arrow">⬇ extends ⬇ extends ⬇ extends ⬇ extends</div>
+
+  <div class="iface-grid" style="grid-template-columns: 1fr 1fr 1fr 1fr; margin-bottom:1rem;">
+    <div class="iface-card">
+      <span class="iface-emoji">🦋</span>
+      <div class="iface-name">Flyable</div>
+      <div class="iface-method">
+        <code>void fly(double altM)</code>
+        <code class="iface-const">MAX_ALT = 500</code>
+      </div>
+    </div>
+    <div class="iface-card">
+      <span class="iface-emoji">🐟</span>
+      <div class="iface-name">Swimmable</div>
+      <div class="iface-method">
+        <code>void swim(double depthM)</code>
+        <code class="iface-const">MAX_DEPTH = 10</code>
+      </div>
+    </div>
+    <div class="iface-card">
+      <span class="iface-emoji">🐜</span>
+      <div class="iface-name">Crawlable</div>
+      <div class="iface-method">
+        <code>void crawl(double speedCm)</code>
+        <code class="iface-const">MAX_SPEED = 30</code>
+      </div>
+    </div>
+    <div class="iface-card">
+      <span class="iface-emoji">🪱</span>
+      <div class="iface-name">Diggable</div>
+      <div class="iface-method">
+        <code>void dig(int depthCm)</code>
+        <code class="iface-const">MAX_DIG = 50</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow">⬇ implements</div>
+
+  <!-- ABSTRACT LAYER -->
+  <div class="sec-title">🏗️ Abstract Layer</div>
+
+  <div class="node" style="border: 2px solid var(--soil-light); margin-bottom: 1rem;">
+    <div class="node-tag tag-abstract">abstract class — permitted by BugBehavior</div>
+    <div class="node-title">🐛 Bug</div>
+    <div class="node-methods">
+      <code>String &nbsp;name</code>
+      <code>int &nbsp;&nbsp;&nbsp;age</code>
+      <code>double weight</code>
+      <code>String &nbsp;habitat</code>
+      &nbsp;&nbsp;
+      <code>String getName() &nbsp;&nbsp;| int getAge()</code>
+      <code>double getWeight() | String toString()</code>
+      <code style="background:#fce4ec; color:#ad1457;">abstract String getBugType()</code>
+    </div>
+  </div>
+
+  <div class="arrow">⬇ extends</div>
+
+  <!-- CONCRETE LAYER -->
+  <div class="sec-title">🐞 Concrete Class Layer</div>
+
+  <div class="concrete-grid">
+    <div class="concrete-card cc-1">
+      <div class="concrete-title">🦋 Butterfly <span class="impl-badge ib-final">final</span></div>
+      <div class="concrete-impl">
+        <span class="impl-badge ib-fly">+Flyable</span>
+        <span class="impl-badge ib-crawl">+Crawlable</span>
+        <span class="impl-badge ib-comp">+Comparable</span>
+        <br><br>
+        eat() &nbsp;sleep() &nbsp;fly() &nbsp;crawl()<br>
+        getBugType() → "Butterfly"<br>
+        compareTo() → weight দিয়ে
+      </div>
+    </div>
+    <div class="concrete-card cc-2">
+      <div class="concrete-title">🐝 Bee <span class="impl-badge ib-final">final</span></div>
+      <div class="concrete-impl">
+        <span class="impl-badge ib-fly">+Flyable</span>
+        <span class="impl-badge ib-comp">+Comparable</span>
+        <br><br>
+        eat() &nbsp;sleep() &nbsp;fly()<br>
+        getBugType() → "Bee"<br>
+        compareTo() → weight দিয়ে
+      </div>
+    </div>
+    <div class="concrete-card cc-3">
+      <div class="concrete-title">🐜 Ant <span class="impl-badge ib-final">final</span></div>
+      <div class="concrete-impl">
+        <span class="impl-badge ib-crawl">+Crawlable</span>
+        <span class="impl-badge ib-dig">+Diggable</span>
+        <span class="impl-badge ib-comp">+Comparable</span>
+        <br><br>
+        eat() &nbsp;sleep() &nbsp;crawl() &nbsp;dig()<br>
+        getBugType() → "Ant"<br>
+        compareTo() → weight দিয়ে
+      </div>
+    </div>
+    <div class="concrete-card cc-4" style="border-left-color: var(--bug4);">
+      <div class="concrete-title">
+        🪲 WaterBeetle
+        <span class="special-badge">★ Crawl + Swim দুটো!</span>
+        <span class="impl-badge ib-final">final</span>
+      </div>
+      <div class="concrete-impl">
+        <span class="impl-badge ib-crawl">+Crawlable</span>
+        <span class="impl-badge ib-swim">+Swimmable</span>
+        <span class="impl-badge ib-comp">+Comparable</span>
+        <br><br>
+        eat() &nbsp;sleep() &nbsp;crawl() &nbsp;swim()<br>
+        getBugType() → "WaterBeetle"<br>
+        👉 GrilledPizza এর মতো — দুটো interface!
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow" style="margin-top:0.5rem;">⬇ stored in</div>
+
+  <!-- DATA LAYER -->
+  <div class="sec-title">📦 Data Layer</div>
+
+  <div class="node" style="border: 2px solid var(--bug4);">
+    <div class="node-tag tag-store">class</div>
+    <div class="node-title">🗂️ BugStore</div>
+    <div class="node-methods">
+      <code>Bug[] bugs</code>
+      <code>Bug[] getBugs()</code>
+      <br>
+      <span style="font-size:10px; color:#888;">
+        Butterfly × 3 &nbsp;|&nbsp; Bee × 3 &nbsp;|&nbsp; Ant × 3 &nbsp;|&nbsp; WaterBeetle × 2
+      </span>
+    </div>
+  </div>
+
+  <div class="arrow">⬇ used by</div>
+
+  <!-- RUNTIME LAYER -->
+  <div class="sec-title">▶️ Runtime Layer</div>
+
+  <div class="main-section">
+    <div class="main-title">⚡ BugSystem.java — main()</div>
+    <div class="main-list">
+      <div class="main-item"><span class="num">1.</span> Interface variable<br><code style="font-size:10px;">Livable l = new Bee(...)</code></div>
+      <div class="main-item"><span class="num">2.</span> instanceof check<br><code style="font-size:10px;">b instanceof Flyable</code></div>
+      <div class="main-item"><span class="num">3.</span> Polymorphism<br><code style="font-size:10px;">Flyable f = new Butterfly(...)</code></div>
+      <div class="main-item"><span class="num">4.</span> Constant check<br><code style="font-size:10px;">alt > Flyable.MAX_ALT</code></div>
+      <div class="main-item"><span class="num">5.</span> Multiple implements<br><code style="font-size:10px;">WaterBeetle → crawl+swim</code></div>
+      <div class="main-item"><span class="num">6.</span> Sealed interface<br><code style="font-size:10px;">BugBehavior bb = new Bee(...)</code></div>
+      <div class="main-item"><span class="num">7.</span> Comparable + Generic<br><code style="font-size:10px;">processBug(b1, b2)</code></div>
+      <div class="main-item"><span class="num">8.</span> Pattern matching<br><code style="font-size:10px;">if(item instanceof Flyable f)</code></div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Mapping table -->
+  <div class="mapping">
+    <div class="mapping-title">🧠 মাথায় রাখো — Pizza → Bug mapping</div>
+    <div class="map-row">
+      <div class="map-from">MenuBehavior (sealed)</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">BugBehavior (sealed)</div>
+    </div>
+    <div class="map-row">
+      <div class="map-from">Orderable</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">Livable</div>
+    </div>
+    <div class="map-row">
+      <div class="map-from">Bakeable</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">Flyable</div>
+    </div>
+    <div class="map-row">
+      <div class="map-from">Grillable</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">Swimmable / Crawlable</div>
+    </div>
+    <div class="map-row">
+      <div class="map-from">MenuItem (abstract)</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">Bug (abstract)</div>
+    </div>
+    <div class="map-row">
+      <div class="map-from">GrilledPizza (Bake+Grill)</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">WaterBeetle (Crawl+Swim)</div>
+    </div>
+    <div class="map-row">
+      <div class="map-from">RestaurantStore</div>
+      <div class="map-arrow">→</div>
+      <div class="map-to">BugStore</div>
+    </div>
+  </div>
+
+  <!-- Chapter coverage -->
+  <div style="margin-top:1.5rem; background: var(--paper); border-radius:14px; padding: 1.25rem 1.5rem; border: 2px solid var(--leaf-pale);">
+    <div style="font-family: 'Caveat', cursive; font-size:1.4rem; color: var(--leaf); margin-bottom:0.75rem;">✅ Chapter 6.1.2 — সব property আছে</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; font-size:11px; color: var(--soil);">
+      <div>✔ 1. Interface variable (new করা যায় না)</div>
+      <div>✔ 2. instanceof check</div>
+      <div>✔ 3. Interface hierarchy (Livable → Flyable)</div>
+      <div>✔ 4. Constants (MAX_ALT, MAX_DEPTH...)</div>
+      <div>✔ 5. Multiple implements (WaterBeetle)</div>
+      <div>✔ 6. Sealed interface (BugBehavior)</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
