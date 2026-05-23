@@ -1,22 +1,24 @@
 package Video_Game_Character_System;
 
 public class GameStore {
+
+    private GameCharacter[] characters;
+
     public GameStore() {
-    }
-    GameCharacter[] characters = new GameCharacter[]{
 
+        characters = new GameCharacter[]{
 
-        // ═══════════════════════════════════════
-        // 🧙 WIZARD × 3
-        // ═══════════════════════════════════════
+                // ═══════════════════════════════════════
+                // 🧙 WIZARD × 3
+                // ═══════════════════════════════════════
 
-        new Wizard(
-                "Aelric the Wise",
-                25,
-                180,
-                "Wizard",
-                95
-        ),
+                new Wizard(
+                        "Aelric the Wise",
+                        25,
+                        180,
+                        "Wizard",
+                        95
+                ),
 
                 new Wizard(
                         "Mystra Flameborn",
@@ -111,9 +113,15 @@ public class GameStore {
                         85,
                         44
                 )
-    };
+        };
+    }
 
-    public GameCharacter[] gameCharacter(){
-        return gameCharacter();
+    // ═══════════════════════════════════════
+    // ✅ Getter Method
+    // ═══════════════════════════════════════
+
+    public GameCharacter[] getCharacters() {
+
+        return characters;
     }
 }
