@@ -42,4 +42,6 @@ public non-sealed interface Explorable
         else if (d < 5.0)  return "Habitable Zone";
         else               return "Outer Zone";
     }
+
+
 }
