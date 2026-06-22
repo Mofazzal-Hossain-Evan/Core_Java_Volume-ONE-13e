@@ -24,6 +24,11 @@ public final class Drummer extends Musician
         return 0;
     }
 
+//    @Override
+//    public void recordAlbum(){
+//        System.out.println(name + "is a test of methods");
+//    }
+
     @Override
     public void beat(int bpm) {
         if (bpm > MAX_BPM) {

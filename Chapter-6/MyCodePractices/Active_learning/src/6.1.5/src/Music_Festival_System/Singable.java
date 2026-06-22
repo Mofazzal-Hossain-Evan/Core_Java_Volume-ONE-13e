@@ -14,7 +14,7 @@ public interface Singable extends Playable{
     }
 
     default String getNoteStatus(String note){
-        if (chckNote(note) && checkVoice()){
+        if (checkNote(note) && checkVoice()){
             return "🎵 " + note +  " — Perfect pitch! ✅";
         } else {
             return "❌ Cannot hit: " + note;
